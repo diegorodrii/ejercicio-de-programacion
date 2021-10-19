@@ -1,6 +1,7 @@
-
-/* Realiza un conversor de euros a pesetas. La cantidad de euros que se quiere
-convertir debe ser introducida por teclado.
+/** 
+ * Realiza un conversor de euros a pesetas. La cantidad de euros que se quiere 
+ * convertir debe ser introducida por teclado.
+ * 
 */
 
     
@@ -13,7 +14,8 @@ public class ejercicio2 {
     euros = Integer.parseInt( linea );
     
     double valorpeseta = 166.38;
-    System.out.println(euros * valorpeseta + " pesetas");
+    
+    System.out.println((int) (euros * valorpeseta) + " pesetas");
     
     
     

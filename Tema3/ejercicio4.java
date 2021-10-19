@@ -1,7 +1,8 @@
-
-/* Escribe un programa que sume, reste, multiplique y divida dos números
-introducidos por teclado.
-*/
+/** 
+ * Escribe un programa que sume, reste, multiplique y divida dos números
+ * introducidos por teclado.
+ * 
+ */
 
     
 public class ejercicio4 {
@@ -17,10 +18,10 @@ public class ejercicio4 {
     int numero2;
     numero2 = Integer.parseInt( linea );
     
-    System.out.println("La suma de los dos números es: " + numero1 + numero2 );
+    System.out.println("La suma de los dos números es: " + (numero1 + numero2) );
     System.out.println("La resta de los dos números es: " + (numero1 - numero2) );
-    System.out.println("La multiplicación de los dos números es: " + numero1 * numero2 );
-    System.out.println("La división de los dos números es: " + numero1 / numero2 );
+    System.out.println("La multiplicación de los dos números es: " + (numero1 * numero2) );
+    System.out.println("La división de los dos números es: " + (numero1 / numero2) );
     
     
     

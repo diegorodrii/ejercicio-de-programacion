@@ -6,18 +6,19 @@
     
 public class ejercicio5 {
   public static void main(String[] args) {
-    String linea;
-    System.out.print("Por favor, introduzca la longitud de la base del rectángulo: ");
-    linea = System.console().readLine();
-    int base;
-    base = Integer.parseInt( linea );
+    System.out.println("Este programa calcula la superficio de un rectángulo");
+    System.out.println("Por favor, introduzca la longitud en cm de la base del rectángulo: ");
+   
+    double base = Double.parseDouble(System.console() .readLine() ) ;
+   
     
-    System.out.print("Por favor, introduzca la longtiud de la altura del rectángulo: ");
-    linea = System.console().readLine();
-    int altura;
-    altura = Integer.parseInt( linea );
+    System.out.println("Por favor, introduzca la longtiud en cm de la altura del rectángulo: ");
     
-    System.out.println("El área del rectángulo es: " + base * altura );
+    double altura = Double.parseDouble(System.console() .readLine() ) ;
+ 
+    double bxh = base * altura;
+    
+    System.out.printf("El área del rectángulo con base= %3.2f cm y h=%3.2f cm es igual a = %3.2f cm² ", base, altura, bxh);
 
     
   }     
