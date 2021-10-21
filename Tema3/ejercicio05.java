@@ -1,10 +1,10 @@
-
-/* 
-  Escribe un programa que calcule el área de un rectángulo.
-*/
+/** 
+ * Escribe un programa que calcule el área de un rectángulo.
+ * 
+ */
 
     
-public class ejercicio5 {
+public class ejercicio05 {
   public static void main(String[] args) {
     System.out.println("Este programa calcula la superficio de un rectángulo");
     System.out.println("Por favor, introduzca la longitud en cm de la base del rectángulo: ");

@@ -1,10 +1,10 @@
-
-/* 
-  Escribe un programa que calcule el área de un triángulo.
-*/
+/**
+ * Escribe un programa que calcule el área de un triángulo.
+ * 
+ */
 
     
-public class ejercicio6 {
+public class ejercicio06 {
   public static void main(String[] args) {
     String linea;
     System.out.print("Por favor, introduzca la longitud de la base del triángulo: ");

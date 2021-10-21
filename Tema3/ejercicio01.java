@@ -1,10 +1,10 @@
 /**
  * Realiza un programa que pida dos números y que luego muestre el resultado
-   de su multiplicación
-*/
+ * de su multiplicación
+ */
 
     
-public class ejercicio1 {
+public class ejercicio01 {
   public static void main(String[] args) {
     String linea;
     System.out.print("Por favor, introduzca uno de los números que quiera multiplicar: ");

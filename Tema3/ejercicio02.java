@@ -5,7 +5,7 @@
 */
 
     
-public class ejercicio2 {
+public class ejercicio02 {
   public static void main(String[] args) {
     String linea;
     System.out.print("Por favor, introduzca la cantidad de euros que quiera convertir a pesetas : ");

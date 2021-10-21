@@ -5,7 +5,7 @@
  */
 
     
-public class ejercicio4 {
+public class ejercicio04 {
   public static void main(String[] args) {
     String linea;
     System.out.print("Por favor, introduzca uno de los números con el que quiera operar: ");

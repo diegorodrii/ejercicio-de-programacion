@@ -1,12 +1,13 @@
 /**
-  Realiza un conversor de Mb a Kb.
-*/
+ * Realiza un conversor de Mb a Kb.
+ * 
+ */
 
     
 public class ejercicio10 {
   public static void main(String[] args) {
-    
-    System.out.print("Por favor, introduzca la cantidad de Mb que quiere convertir a Kb: ");
+    System.out.println("Esto es un conversor de Mb a Kb");
+    System.out.print("\nPor favor, introduzca la cantidad de Mb que quiere convertir a Kb: ");
     double mb = Double.parseDouble(System.console() .readLine() ) ;
 
     

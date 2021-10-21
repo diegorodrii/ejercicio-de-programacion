@@ -1,6 +1,7 @@
 /**
-  Realiza un conversor de Mb a Kb.
-*/
+ * Realiza un conversor de Mb a Kb.
+ * 
+ */
 
     
 public class ejercicio11 {
