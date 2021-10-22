@@ -27,7 +27,9 @@ public class ejercicio02 {
     if ((hora <= 5) || (hora >= 21)) {
       System.out.println("¡Buenas noches!");
 
-    
+    if (hora < 24){
+      System.out.println("Ese número no es válido.");
+    }
     
 
     }
