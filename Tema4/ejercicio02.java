@@ -19,20 +19,20 @@ public class ejercicio02 {
       
     }
 
-    if ((hora <= 20) && (hora >= 13)) {
+    else if ((hora <= 20) && (hora >= 13)) {
       System.out.println("¡Buenas tardes!");
 
     } 
 
-    if ((hora <= 5) || (hora >= 21)) {
-      System.out.println("¡Buenas noches!");
-
-    if (hora < 24){
-      System.out.println("Ese número no es válido.");
+    else if (((hora >= 21) && (hora < 24)) || ((hora <= 5) && (hora >= 0))) {
+      System.out.println("Buenas noches");
     }
     
+    else if ((hora >= 24) || (hora < 0)) {
+      System.out.println("Hora introducida incorrecta");
+    
 
-    }
+    
   }     
 }
 

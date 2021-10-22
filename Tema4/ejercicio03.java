@@ -8,7 +8,7 @@
 public class ejercicio03{
   public static void main(String[] args) {
     System.out.println("Este programa te muestra el día de la semana correspondiente a su número ");
-    System.out.print("Por favor, indique un número para asociarlo con su semana: ");
+    System.out.print("Por favor, indique un número para asociarlo con su día de la semana: ");
     String solicitud = System.console().readLine();
     int dia = Integer.parseInt (solicitud);
 
