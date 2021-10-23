@@ -1,5 +1,6 @@
 /**
- * Realiza un programa que calcule la media de tres notas.
+ * Amplía el programa anterior para que diga la nota del boletín (insuficiente,
+ * suficiente, bien, notable o sobresaliente).
  * 
  * 
  */
@@ -18,14 +19,28 @@ public class ejercicio08{
     double examen3 = Double.parseDouble(System.console().readLine());
     
     double media =( (double) examen1 + (double) examen2 + (double) examen3 ) / 3;
+
     
-    if (media < 10){
-    System.out.printf ("La nota media es: %1.2f", media);
-    } 
-    else if (media > 10) {
-		System.out.println ("Las notas introducidas son incorrectas"); 
+    if (media > 10) {
+    System.out.println ("Las notas introducidas son incorrectas"); 
     }
     
+    if ((media <=10) && (media >= 9)){
+    System.out.printf ("La nota media es: %1.2f , lo que corresponde a un sobresaliente", media );
+    }
+    
+    if ((media < 9) && (media >= 7 )){
+    System.out.printf ("La nota media es: %1.2f , lo que corresponde a un notable", media );    
+    }
+    if ((media < 7) && (media >= 6)){
+    System.out.printf ("La nota media es: %1.2f , lo que corresponde a un bien", media );
+    }   
+    if ((media < 6) && (media >= 5)){
+    System.out.printf ("La nota media es: %1.2f , lo que corresponde a un suficiente", media );  
+    }        
+    if ((media < 5) && (media >= 0)){
+    System.out.printf ("La nota media es: %1.2f , lo que corresponde a un insuficiente", media );      
+    }    
    /** Preguntar a Luis acerca de como introducir esto.
     else if (examen1 > 10){
       System.out.println("Las notas introducidas no son correctas");
