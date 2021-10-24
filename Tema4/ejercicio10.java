@@ -3,8 +3,7 @@
  * 
  * 
  */
-
-    
+ 
 public class ejercicio10{
   public static void main(String[] args) {
     System.out.println("Este programa determina tu horóscopo a partie de tu día y mes de nacimiento");
@@ -17,7 +16,7 @@ public class ejercicio10{
     String horoscopo = "";
     
     switch (mes){
-      case 1 :
+      case 4 :
       if (dia >= 21){
       horoscopo = "Aries";
     } else {
@@ -25,99 +24,96 @@ public class ejercicio10{
     }       
       break;
    
-    switch (mes){
-      case 2 :
+      case 5 :
       if (dia <= 20){
       horoscopo = "Tauro";
     } else {
       horoscopo = "Geminis";
     }       
       break;
-   
-    switch (mes){
-      case 3 :
-      if (dia >= 21){
+
+      case 6 :
+      if (dia <= 21){
       horoscopo = "Géminis";
     } else {
       horoscopo = "Cáncer";
     }       
       break;
    
-    switch (mes){
-      case 4 :
-      if (dia >= 21){
+
+      case 7 :
+      if (dia <= 21){
       horoscopo = "Cáncer";
     } else {
       horoscopo = "Leo";
     }       
       break;
    
-    switch (mes){
-      case 5 :
-      if (dia >= 23){
+
+      case 8 :
+      if (dia <= 23){
       horoscopo = "Leo";
     } else {
       horoscopo = "Virgo";
     }       
       break;
    
-    switch (mes){
-      case 6 :
-      if (dia >= 23){
+
+      case 9 :
+      if (dia <= 23){
       horoscopo = "Virgo";
     } else {
       horoscopo = "Libra";
     }       
       break;
    
-    switch (mes){
-      case 7 :
-      if (dia >= 23){
+
+      case 10 :
+      if (dia <= 23){
       horoscopo = "Libra";
     } else {
       horoscopo = "Escorpio";
     }       
       break;   
 
-    switch (mes){
-      case 8 :
-      if (dia >= 23){
+      case 11 :
+      if (dia <= 23){
       horoscopo = "Escorpio";
     } else {
       horoscopo = "Sagitario";
     }       
       break;
    
-    switch (mes){
-      case 9 :
-      if (dia >= 22){
+
+      case 12 :
+      if (dia <= 22){
       horoscopo = "Sagitario";
     } else {
       horoscopo = "Capricornio";
     }       
       break;
    
-    switch (mes){
-      case 10 :
-      if (dia >= 22){
-      horoscopo = "Capricornio";
-    } else {
+
+      case 1 :
+      if (dia <= 22){
       horoscopo = "Acuario";
+    } else {
+      horoscopo = "Capricornio";
     }       
       break;
    
-    switch (mes){
-      case 11 :
-      if (dia >= 20){
+ 
+      case 2 :
+      if (dia <= 20){
       horoscopo = "Acuario";
     } else {
       horoscopo = "Piscis";
     }       
       break;
        
-    switch (mes){
-      case 12 :
-      if (dia >= 19){
+
+      case 3 :
+      if (dia <= 19){
       horoscopo = "Piscis";
     } else {
       horoscopo = "Aries";
@@ -130,3 +126,4 @@ public class ejercicio10{
    System.out.println("Tu horóscopo es: " + horoscopo);
   }
 }
+
