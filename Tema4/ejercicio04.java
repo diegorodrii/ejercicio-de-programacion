@@ -12,8 +12,7 @@ public class ejercicio04{
   public static void main(String[] args) {
     System.out.println("Este programa calcula el salario ganado en función de las horas semanales trabajadas ");
     System.out.print("Por favor, indique el número entero de horas que ha trabajado estas horas: ");
-    String horasTrabajadas = System.console().readLine();
-    int horas = Integer.parseInt (horasTrabajadas);
+    int horas = Integer.parseInt (System.console().readLine());
 
     if ((horas >=0) && (horas <= 40)) {
       int salario1 = (int) horas * 12;

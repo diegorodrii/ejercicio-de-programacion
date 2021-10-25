@@ -17,7 +17,17 @@ public class ejercicio05{
     
     double operacion = (double)-b / (double) a ;
     
-    System.out.printf ("El resultado de la operación es: %1.3f", operacion);
+
+    
+    if (a == 0) {
+			if (b == 0) {
+			  System.out.println ("Esta ecuacion tiene infinitas soluciones, es compatible indeterminado.");
+			} else {
+				System.out.println("Esta ecuación no tiene solución");
+			}
+		} else {
+			System.out.println ("El resultado de x= " + (-b/a));
+		}
     
   }     
 }

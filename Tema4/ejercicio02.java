@@ -10,7 +10,7 @@
 public class ejercicio02 {
   public static void main(String[] args) {
     System.out.println("Este programa te saluda personalizadamente dependiendo de la hora que introduzca. ");
-    System.out.print("Por favor, indique una hora como número entero: ");
+    System.out.print("Por  favor, indique una hora como número entero: ");
     String solicitud = System.console().readLine();
     int hora = Integer.parseInt (solicitud);
 

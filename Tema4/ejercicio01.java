@@ -15,27 +15,31 @@ public class ejercicio01 {
       System.out.println("Programación");
       
     } 
-     if (dia.equals("martes")) {
+    else if (dia.equals("martes")) {
       System.out.println("Programación");
       
     }     
-    if (dia.equals("miercoles")) {
+    else if (dia.equals("miercoles")) {
       System.out.println("Sistemas informáticos");
     }
       
-    if (dia.equals("miércoles")) {
+    else if (dia.equals("miércoles")) {
       System.out.println("Sistemas informáticos");      
       
     }
       
-    if (dia.equals("jueves")) {
+    else if (dia.equals("jueves")) {
       System.out.println("Programación");
       
     } 
-     if (dia.equals("viernes")) {
+     else if (dia.equals("viernes")) {
       System.out.println("Sistemas informáticos");
-         
+    }  
+     else{
+      System.out.println("No hay clase o has introducido mal los datos");
+                  
     }     
   }     
 }
+
 

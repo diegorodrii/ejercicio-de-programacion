@@ -25,32 +25,32 @@ public class ejercicio08{
     System.out.println ("Las notas introducidas son incorrectas"); 
     }
     
-    if ((media <=10) && (media >= 9)){
+    else if ((media <=10) && (media >= 9)){
     System.out.printf ("La nota media es: %1.2f , lo que corresponde a un sobresaliente", media );
     }
     
-    if ((media < 9) && (media >= 7 )){
+    else if ((media < 9) && (media >= 7 )){
     System.out.printf ("La nota media es: %1.2f , lo que corresponde a un notable", media );    
     }
-    if ((media < 7) && (media >= 6)){
+    else if ((media < 7) && (media >= 6)){
     System.out.printf ("La nota media es: %1.2f , lo que corresponde a un bien", media );
     }   
-    if ((media < 6) && (media >= 5)){
+    else if ((media < 6) && (media >= 5)){
     System.out.printf ("La nota media es: %1.2f , lo que corresponde a un suficiente", media );  
     }        
-    if ((media < 5) && (media >= 0)){
+    else if ((media < 5) && (media >= 0)){
     System.out.printf ("La nota media es: %1.2f , lo que corresponde a un insuficiente", media );      
     }    
-   /** Preguntar a Luis acerca de como introducir esto.
-    else if (examen1 > 10){
+
+    else  (examen1 > 10){
       System.out.println("Las notas introducidas no son correctas");
     }
-    else if (examen2 > 10){
+    else  (examen2 > 10){
       System.out.println("Las notas introducidas no son correctas");
     }
-    else if (examen3 > 10){
+    else  (examen3 > 10){
       System.out.println("Las notas introducidas no son correctas");
-      */
+      
     
   }     
 }
