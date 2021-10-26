@@ -12,7 +12,7 @@ public class ejercicio10{
     
     System.out.print("Por favor, introduzca el número del mes en el que nació: ");
     int mes = Integer.parseInt(System.console().readLine());
-    
+  
     String horoscopo = "";
     
     switch (mes){

@@ -17,15 +17,36 @@ public class ejercicio09{
     System.out.print("Por favor, introduzca el valor de c: ");
     double c = Double.parseDouble(System.console().readLine());
     
-    double raiz = ((double) b * (double) b) - 4 * ((double) a * (double) c);
+
     
-    double x1;    
-    double x2;
-    x1 = (((double) - b + Math.sqrt((double) raiz))) / 2 * (double) a;
-           
+    if ((a == 0) && (b == 0) && (c == 0)) {
+      System.out.println("La ecuación tiene infinitas soluciones.");
+    }
     
-    System.out.printf ("El resultado de la ecuación es: %1.3f ", x1); 
+    if ((a == 0) && (b == 0) && (c != 0)) {
+      System.out.println("La ecuación no tiene solución.");
+    }
+      
+    if ((a != 0) && (b != 0) && (c == 0)) {
+      System.out.println("x1 = 0");
+      System.out.println("x2 = " + (-b / a));
+    }
+    
+    if ((a == 0) && (b != 0) && (c != 0)) {
+      System.out.println("x1 = x2 = " + (-c / b));
+    }
+
+    if ((a != 0) && (b != 0) && (c != 0)) {
+        
+      double irreal = b*b - (4 * a * c);
+		}
+      if (rreal < 0) {
+          System.out.println("La ecuación no tiene soluciones reales");
+      }  else {
+        System.out.println("x1 = " + (-b + Math.sqrt(rreal))/(2 * a));
+        System.out.println("x2 = " + (-b - Math.sqrt(rreal))/(2 * a));
     
  
   }      
+}
 } 
