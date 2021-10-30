@@ -1,1 +1,1 @@
-minutosTotal
+ double precioFinal;
