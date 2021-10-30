@@ -42,15 +42,16 @@ public class ejercicio08{
     System.out.printf ("La nota media es: %1.2f , lo que corresponde a un insuficiente", media );      
     }    
 
-    else  (examen1 > 10){
+    else if (examen1 > 10){
       System.out.println("Las notas introducidas no son correctas");
     }
-    else  (examen2 > 10){
+    else if (examen2 > 10){
       System.out.println("Las notas introducidas no son correctas");
     }
-    else  (examen3 > 10){
+    else if (examen3 > 10){
       System.out.println("Las notas introducidas no son correctas");
       
     
   }     
+}
 }

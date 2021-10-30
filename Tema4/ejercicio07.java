@@ -5,7 +5,7 @@
  */
 
     
-public class ejercicio08{
+public class ejercicio07{
   public static void main(String[] args) {
     System.out.println("Este programa calcula la nota media de las tres notas introducidas: ");
     System.out.print("Por favor, introduzca la nota del primer examen: ");

@@ -18,7 +18,7 @@
  * @author Diego Aguilera Martín
  * @author Diego Rodríguez Barcos
  */
-public class Ejercicio16Tema04 {
+public class ejercicio16 {
     public static void main(String[] args) {
 
         int puntuacion = 0;

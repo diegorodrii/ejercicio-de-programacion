@@ -17,7 +17,7 @@ public class ejercicio09{
     System.out.print("Por favor, introduzca el valor de c: ");
     double c = Double.parseDouble(System.console().readLine());
     
-
+    double irreal = b*b - (4 * a * c);5
     
     if ((a == 0) && (b == 0) && (c == 0)) {
       System.out.println("La ecuación tiene infinitas soluciones.");
@@ -35,16 +35,17 @@ public class ejercicio09{
     if ((a == 0) && (b != 0) && (c != 0)) {
       System.out.println("x1 = x2 = " + (-c / b));
     }
-
+    
     if ((a != 0) && (b != 0) && (c != 0)) {
         
-      double irreal = b*b - (4 * a * c);
+ 
+      System.out.println("x = " + irreal);
 		}
-      if (rreal < 0) {
+      if (irreal < 0) {
           System.out.println("La ecuación no tiene soluciones reales");
       }  else {
-        System.out.println("x1 = " + (-b + Math.sqrt(rreal))/(2 * a));
-        System.out.println("x2 = " + (-b - Math.sqrt(rreal))/(2 * a));
+        System.out.println("x1 = " + (-b + Math.sqrt(irreal))/(2 * a));
+        System.out.println("x2 = " + (-b - Math.sqrt(irreal))/(2 * a));
     
  
   }      

@@ -26,7 +26,7 @@ public class ejercicio05{
 				System.out.println("Esta ecuación no tiene solución");
 			}
 		} else {
-			System.out.println ("El resultado de x= " + (-b/a));
+			System.out.println ("El resultado de x= " + operacion);
 		}
     
   }     
