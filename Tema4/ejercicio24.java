@@ -45,10 +45,36 @@ public class ejercicio24{
       sueldo = sueldo * 0.8;
     }
 
+    double sueldoBase = 0;
+    if (cargo == 1){
+      sueldoBase = 950;
+    } else if (cargo == 2){
+      sueldoBase = 1200;
+    } else if (cargo == 3){
+      sueldoBase = 1600;
+    }
+    double retencion = 0;
+    if (estadoCivil == 1){
+      retencion = 0.25;
+    } else if ( estadoCivil == 2){
+      retencion = 0.2;
+    } 
    
+    if ((cargo > 3) || (cargo < 0)){
+      System.out.println("Lo siento, el cargo introducido es incorrecto");
+    } else if ((dias > 31) || (dias < 0)) {
+      System.out.println("Lo siento, los dias introducidos son incorrectos");
+    } else if ((estadoCivil > 2) || (estadoCivil < 0)){
+      System.out.println("Lo siento, el estado civil introducido es incorrecto");
+    } else {  /** Precio Final */
+      System.out.println("Tu sueldo base conforme a tu puesto es: " + sueldoBase + " €");
+      System.out.println("Dietas por los días viajados " + (30 * dias) + " €");
+      System.out.println("Tu sueldo en bruto es: " + (sueldoBase + (30 * dias + " €")));
+      System.out.println("La retención es de: " + (retencion * sueldo) + " €");
+      System.out.println("Tu sueldo neto es de: " + sueldo + " €");
    
-  /** Precio Final */
-   System.out.println("Tu sueldo es de: " + sueldo);
+     }
+   		
   }
-}			
+}		
 
