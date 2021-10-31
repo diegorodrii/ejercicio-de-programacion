@@ -13,7 +13,7 @@ public class ejercicio11{
     System.out.print("Por favor, introduzca los minutos: ");
     int minutos = Integer.parseInt(System.console().readLine());
     
-  
+   
     
     switch (mes){
       case 1 :
