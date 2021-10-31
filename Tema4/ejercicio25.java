@@ -9,41 +9,37 @@
  
 public class ejercicio25{
   public static void main(String[] args) {
-    System.out.println("Este programa genera la nómina de un empleado");
-    System.out.print("Por favor, introduzca el cargo del empleado (1 - Junior, 2- Senior o 3 - Jefe): ");
-    int cargo = Integer.parseInt(System.console().readLine());
-    System.out.print("Por favor, introducta la cantidad de días que ha estado viajando visitando clientes en este mes: ");
-    int dias = Integer.parseInt(System.console().readLine());
-    System.out.print("Por favor, introduzca su estado civil (1 - Soltero, 2 - Casado): ");
-    int estadoCivil = Integer.parseInt(System.console().readLine());
+    System.out.println("Este programa calcula el precio según el alto y el ancho de la bandera solicitada");
+    System.out.print("Por favor, introduzca el alto de la bandera en centímetros: ");
+    double alto = Double.parseDouble(System.console().readLine());
+    System.out.print("Por favor, introducta el ancho de la bandera en centímetros: ");
+    double ancho = Double.parseDouble(System.console().readLine());
+    System.out.print("Por favor, especifique si quiere que la bandera tenga el escudo bordado (1 -Si o 2-No): ");
+    int escudo = Integer.parseInt(System.console().readLine());
 
-    double sueldo = 0;
-    /* Sueldo**/ 
-    switch(cargo){
-      case 1: 
-          sueldo = 950;
-          break;
-      case 2: 
-          sueldo = 1200;
-          break;
-      case 3: 
-          sueldo = 1600;
-          break;
-  }
-   /* Días viajando**/
-    sueldo = sueldo + (30 * dias);
+    
+    /* Centímetros cuadrados**/ 
+    double superficie = alto * ancho;
+  
+   /* Precio superficie**/
+    double precioSuperficie = superficie * 0.01;
  
     /** IRPF*/
-    if (estadoCivil == 1){
-      sueldo = sueldo * 0.75;
-    } else if (estadoCivil == 2){
-      sueldo = sueldo * 0.8;
+    if (escudo == 1){
+      precioSuperficie = precioSuperficie + 3.25;
+    } else if (escudo == 2){
+      precioSuperficie = precioSuperficie;
     }
 
-   
-   
-  /** Precio Final */
-   System.out.println("Tu sueldo es de: " + sueldo);
+   if (alto < 0){
+     System.out.println ("El alto introducido es incorrecto");
+   } else if (ancho < 0){
+    System.out.println ("El ancho introducido es incorrecto");
+   } else if ((escudo > 2) || (escudo < 1)) {
+    System.out.println ("El valor introducido al preguntar por el escudo es incorrecto");
+   } else {/** Precio Final */
+    System.out.printf("EL precio de una bandera de %.2f centímetros cuadrados es de %.2f € ", superficie, precioSuperficie);
+   }
   }
 }			
 
