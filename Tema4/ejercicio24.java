@@ -15,26 +15,35 @@
 public class ejercicio24{
   public static void main(String[] args) {
     System.out.println("Este programa genera la nómina de un empleado");
-    System.out.print("Por favor, introduzca el cargo del empleado (Junior, Senior o Jefe): ");
-    String cargo = System.console().readLine().toLowerCase();
+    System.out.print("Por favor, introduzca el cargo del empleado (1 - Junior, 2- Senior o 3 - Jefe): ");
+    int cargo = Integer.parseInt(System.console().readLine());
     System.out.print("Por favor, introducta la cantidad de días que ha estado viajando visitando clientes en este mes: ");
     int dias = Integer.parseInt(System.console().readLine());
     System.out.print("Por favor, introduzca su estado civil (1 - Soltero, 2 - Casado): ");
     int estadoCivil = Integer.parseInt(System.console().readLine());
 
-    
-    /* Sueldo**/ 
     double sueldo = 0;
-    /* IVA*/
-    if (cargo.equals("Junior")){
-      sueldo =  950;
-    } else if (cargo.equals("Senior")){
-      sueldo = 1200;
-    } else if (cargo.equals("Jefe")){
-      sueldo = 1600;
-    }
+    /* Sueldo**/ 
+    switch(cargo){
+      case 1: 
+          sueldo = 950;
+          break;
+      case 2: 
+          sueldo = 1200;
+          break;
+      case 3: 
+          sueldo = 1600;
+          break;
+  }
+   /* Días viajando**/
+    sueldo = sueldo + (30 * dias);
  
-    /** Código*/
+    /** IRPF*/
+    if (estadoCivil == 1){
+      sueldo = sueldo * 0.75;
+    } else if (estadoCivil == 2){
+      sueldo = sueldo * 0.8;
+    }
 
    
    
