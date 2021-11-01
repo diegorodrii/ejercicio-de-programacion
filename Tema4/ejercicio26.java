@@ -15,37 +15,81 @@ public class ejercicio26{
     System.out.print("Por favor, introduzca la cantidad de personas que solicitan una entrada: ");
     int personas = Integer.parseInt(System.console().readLine());
     System.out.print("Por favor, introduzca el numero del dia de la semana para las entradas (1-7): ");
-    String dia = System.console().readLine().toLowerCase();
-    System.out.print("En caso de que sea jueves, ¿Dispone usted de la tarjeta CineCampa?: 1-Si  2-No ");
-    int tarjeta = Integer.parseInt(System.console().readLine());
+    int dia = Integer.parseInt(System.console().readLine());
 
+    double precioBaseNormal = 8;
+    double precioBaseEspecial = 5;
+    double precioFinal = 0;
+    double precioPareja = 11;
+    int cantidadParejas = personas / 2;
+
+    /**Miércoles */
+    if (dia == 3){
+      precioFinal = precioBaseEspecial;
+    }
+
+    /**Jueves */
+    if ((dia == 4) && (personas % 2 == 0)){
+      precioFinal = precioPareja * cantidadParejas;
+      System.out.print("¿Dispone usted de la tarjeta CineCampa?: 1-Si  2-No ");
+      int tarjeta = Integer.parseInt(System.console().readLine());
+      if (tarjeta == 1){
+        precioFinal = precioFinal * 0.9;
+      }
+    }
+    if ((dia == 4) && (personas % 2 == 1)){
+      precioFinal = precioPareja * cantidadParejas + precioBaseNormal;
+      System.out.print("¿Dispone usted de la tarjeta CineCampa?: 1-Si  2-No ");
+      int tarjeta = Integer.parseInt(System.console().readLine());
+      if (tarjeta == 1){
+        precioFinal = precioFinal * 0.9;
+      }
+    }
+
+    /** Cualquier otro día */
+    if ((dia == 1) || (dia == 2) || (dia == 5) || (dia == 6) || (dia == 7)){
+      precioFinal = precioBaseNormal * personas;
+    }
     
-
-    double precioBase = 0;
-    double precioPareja = 0;
-    double precioFinal = precioBase;
+    /** Pasar el número del día de la semana a formato String para así en la resolución poder aclarar el día seleccionado */
+    String diaEscrito = "";
     switch (dia){
       case 1:
-      precioBase = 8;
+      diaEscrito = "lunes";
       break;
-      
+ 
       case 2:
-      precioBase = 8;
+      diaEscrito = "martes";
       break;
-      
+
       case 3:
-      precioBase = 5;
+      diaEscrito = "miércoles";
       break;
-      
-      case 4:
     
-      
+      case 4:
+      diaEscrito = "jueves";
+      break;
 
+      case 5:
+      diaEscrito = "viernes";
+      break;
 
+      case 6:
+      diaEscrito = "sábado";
+      break;
 
-
-
-
+      case 7:
+      diaEscrito = "domingo";
+      break;
+    }
+    /** Resolución */
+    if ((dia == 1) || (dia == 2) || (dia == 5) || (dia == 6) || (dia == 7) || (dia == 4) || (dia == 3)){
+    System.out.println("La cantidad de personas es de " + personas);
+    System.out.println("El día de la semana es " + diaEscrito);
+    System.out.println("El precio final de la entrada es de " + precioFinal + " €");
+    }  else {
+      System.out.println("Lo siento, el día introducido no es correcto");
+    }
   } 
 }			
 
