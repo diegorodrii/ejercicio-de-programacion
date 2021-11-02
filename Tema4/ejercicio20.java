@@ -17,22 +17,22 @@ public class ejercicio20{
 			
 			}
 
-    if ((numero >= 10) && (numero <= 99) && (numero % 10 == numero / 10)){
+    else if ((numero >= 10) && (numero <= 99) && (numero % 10 == numero / 10)){
 			
 			System.out.println("El número es capicúa");
 			
 			}
-    if ((numero >= 100) && (numero <= 999) && (numero % 10 == numero / 100)){
+    else if ((numero >= 100) && (numero <= 999) && (numero % 10 == numero / 100)){
 			
 			System.out.println("El número es capicúa");
 			
 			}
-    if ((numero >= 1000) && (numero <= 9999) && (numero % 10 == numero / 1000)){
+    else if ((numero >= 1000) && (numero <= 9999) && (numero % 10 == (numero / 1000 % 10)) && ((numero / 100 % 10) == (numero / 10 % 10 ))){
 			
 			System.out.println("El número es capicúa");
 			
 			}
-    if ((numero >= 10000) && (numero <= 99999) && (numero % 10 == numero / 10000)){
+    else if ((numero >= 10000) && (numero <= 99999) && (numero % 10 == (numero / 10000 % 10)) && ((numero / 100 % 10) == (numero / 100 % 10 ))){
 			
 			System.out.println("El número es capicúa");
 			
