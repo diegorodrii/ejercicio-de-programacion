@@ -25,7 +25,6 @@ public class ejercicio29{
 
     /**Elecciones */
     String eleccionDesayuno = "";
-    String pitufoEscrito = "";
     switch(desayuno){
       case 1:
       eleccionDesayuno = "Ha elegido la palmera como desayuno";

@@ -6,7 +6,7 @@
  * 
  */
  
-public class ejercicio30{
+public class ejercicioEx1{
     public static void main(String[] args) {
       System.out.println("Este programa muestra la versión complementaria del número que se introduzca");
       System.out.print("Por favor, introduzca el número: ");
