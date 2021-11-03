@@ -13,115 +13,16 @@ public class ejercicio11{
     System.out.print("Por favor, introduzca los minutos: ");
     int minutos = Integer.parseInt(System.console().readLine());
     
-   
+    double mediaNoche = 86400;
     
-    switch (mes){
-      case 1 :
-      if (dia >= 21){
-      horoscopo = "Aries";
-    }   
-      break;
+    double segundosHora = hora * 3600;
+    double minutosHora = minutos * 60;
+
+    double segundosRestantes = mediaNoche - segundosHora - minutosHora;
+
+    System.out.println("Quedan " + segundosRestantes + " segundos para la medianoche");
+    
    
-      case 5 :
-      if (dia <= 20){
-      horoscopo = "Tauro";
-    } else {
-      horoscopo = "Geminis";
-    }       
-      break;
-
-      case 6 :
-      if (dia <= 21){
-      horoscopo = "Géminis";
-    } else {
-      horoscopo = "Cáncer";
-    }       
-      break;
-   
-
-      case 7 :
-      if (dia <= 21){
-      horoscopo = "Cáncer";
-    } else {
-      horoscopo = "Leo";
-    }       
-      break;
-   
-
-      case 8 :
-      if (dia <= 23){
-      horoscopo = "Leo";
-    } else {
-      horoscopo = "Virgo";
-    }       
-      break;
-   
-
-      case 9 :
-      if (dia <= 23){
-      horoscopo = "Virgo";
-    } else {
-      horoscopo = "Libra";
-    }       
-      break;
-   
-
-      case 10 :
-      if (dia <= 23){
-      horoscopo = "Libra";
-    } else {
-      horoscopo = "Escorpio";
-    }       
-      break;   
-
-      case 11 :
-      if (dia <= 23){
-      horoscopo = "Escorpio";
-    } else {
-      horoscopo = "Sagitario";
-    }       
-      break;
-   
-
-      case 12 :
-      if (dia <= 22){
-      horoscopo = "Sagitario";
-    } else {
-      horoscopo = "Capricornio";
-    }       
-      break;
-   
-
-      case 1 :
-      if (dia <= 22){
-      horoscopo = "Acuario";
-    } else {
-      horoscopo = "Capricornio";
-    }       
-      break;
-   
- 
-      case 2 :
-      if (dia <= 20){
-      horoscopo = "Acuario";
-    } else {
-      horoscopo = "Piscis";
-    }       
-      break;
-       
-
-      case 3 :
-      if (dia <= 19){
-      horoscopo = "Piscis";
-    } else {
-      horoscopo = "Aries";
-    }       
-   break;
- 
-    default:
-     horoscopo = "Vuelve a introducir los datos";
-	 }
-   System.out.println("Tu horóscopo es: " + horoscopo);
   }
 }
 

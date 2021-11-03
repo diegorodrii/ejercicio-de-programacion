@@ -28,6 +28,7 @@ public class ejercicio21{
     if (media <= 5){
       System.out.print("Por favor, introduzca si en su recuperación es apto o no apto : ");
       String recuperacion = System.console().readLine();
+    
 			
 			if (recuperacion.equals("apto")){
 				System.out.println("Tu recuperación es apto y por tanto tu nota es un 5");
@@ -36,7 +37,7 @@ public class ejercicio21{
 			if (recuperacion.equals("no apto")){
 				System.out.println("Tu recuperación no es apto y por tanto se mantiene tu nota media anterior de " + media);				
 		  }		  
-		}
+    }
   }
 }			
 

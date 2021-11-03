@@ -19,23 +19,11 @@ public class ejercicio07{
     
     double media =( (double) examen1 + (double) examen2 + (double) examen3 ) / 3;
     
-    if (media < 10){
-    System.out.printf ("La nota media es: %1.2f", media);
-    } 
-    else if (media > 10) {
-		System.out.println ("Las notas introducidas son incorrectas"); 
-    }
-    
-   /** Preguntar a Luis acerca de como introducir esto.
-    else if (examen1 > 10){
+
+    if ((examen1 > 10) || (examen2 > 10) || (examen3 > 10)){
       System.out.println("Las notas introducidas no son correctas");
+    } else {
+      System.out.printf("La media es de %.2f", media);
     }
-    else if (examen2 > 10){
-      System.out.println("Las notas introducidas no son correctas");
-    }
-    else if (examen3 > 10){
-      System.out.println("Las notas introducidas no son correctas");
-      */
-    
-  }     
+  } 
 }

@@ -27,9 +27,7 @@ public class ejercicio25{
     /** IRPF*/
     if (escudo == 1){
       precioSuperficie = precioSuperficie + 3.25;
-    } else if (escudo == 2){
-      precioSuperficie = precioSuperficie;
-    }
+    } 
 
    if (alto < 0){
      System.out.println ("El alto introducido es incorrecto");

@@ -15,10 +15,11 @@ public class ejercicioEx2{
       String desayuno = System.console().readLine().toLowerCase();
       /** Elección en caso de pitufo */
       double precioFinal = 0;
+      String eleccionPitufo = "";
       if (desayuno.equals("pitufo")){
         System.out.println("Desea que el pitufo sea de aceite(1) o de tortilla(2): ");
         int pitufo = Integer.parseInt(System.console().readLine());
-        String eleccionPitufo = "";
+        
         switch(pitufo){
           case 1:
               eleccionPitufo = "Usted ha elegido el pitufo de aceite";

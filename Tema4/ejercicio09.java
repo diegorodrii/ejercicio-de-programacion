@@ -17,7 +17,7 @@ public class ejercicio09{
     System.out.print("Por favor, introduzca el valor de c: ");
     double c = Double.parseDouble(System.console().readLine());
     
-    double irreal = b*b - (4 * a * c);5
+    double irreal = b*b - (4 * a * c);
     
     if ((a == 0) && (b == 0) && (c == 0)) {
       System.out.println("La ecuación tiene infinitas soluciones.");

@@ -32,9 +32,7 @@ public class ejercicio23{
     }
  
     /** Código*/
-    if (codigo.equals("nopro")){
-      precioFinal = precioFinal;
-    } else if (codigo.equals("mitad")){
+    if (codigo.equals("mitad")){
       precioFinal = precioFinal * 0.5;
     } else if (codigo.equals("meno5")){
       precioFinal = precioFinal - 5.0;
