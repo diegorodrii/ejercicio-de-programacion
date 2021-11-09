@@ -8,8 +8,9 @@ public class Ejercicio08 {
     System.out.print("Introduzca el número del que desea saber su tabla de multiplicar: ");
     int n = Integer.parseInt(System.console().readLine());
 
-
-    for (int i = n; i <= n * 10; i += n) {
+    System.out.println("Tabla de multiplicar del " + n );
+    
+    for (int i = 0; i <= n * 10; i += n) {
       System.out.println(i);
     }
 
