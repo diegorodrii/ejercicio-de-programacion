@@ -12,16 +12,21 @@ public class Ejercicio10 {
     
     int numero = 0;
     int cantidadNumeros = 0;
+    int n = 0;
+    
     do {
     System.out.print("Este programa te calcula la media de los números introducidos hasta que se marca un número negativo ");
     System.out.print("Por favor, introduzca los números que quiere introducir de uno en uno: ");
-    numero = Integer.parseInt(System.console().readLine());
+    n = Integer.parseInt(System.console().readLine());
     cantidadNumeros++;
     } while (numero > 0);
     
+    numero = numero + n;
     int media = numero / cantidadNumeros;
 
-  System.out.println("La media es " + media);
+    if (numero < 0){
+      System.out.println("La media es " + media);
+    }
 
 
     
