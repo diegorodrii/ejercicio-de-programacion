@@ -10,7 +10,7 @@
 public class Ejercicio10 {
   public static void main(String[] args) {
     
-    int numero = 100;
+    int numero = 0;
     int cantidadNumeros = 0;
     do {
     System.out.print("Este programa te calcula la media de los números introducidos hasta que se marca un número negativo ");
