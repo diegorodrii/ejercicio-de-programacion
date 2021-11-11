@@ -15,8 +15,7 @@ public class Ejercicio10 {
     int numeroPedido = 0;
 
     do {
-      System.out.println(
-          "Este programa te calcula la media de los números introducidos hasta que se marca un número negativo ");
+      System.out.println("Este programa te calcula la media de los números introducidos hasta que se marca un número negativo ");
       System.out.print("Por favor, introduzca los números que quiere introducir de uno en uno: ");
       numeroPedido = Integer.parseInt(System.console().readLine());
       if (numeroPedido < 0) {
