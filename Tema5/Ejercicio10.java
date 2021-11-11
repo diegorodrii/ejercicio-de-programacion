@@ -9,26 +9,28 @@
  */
 public class Ejercicio10 {
   public static void main(String[] args) {
-    
-    int numero = 0;
-    int cantidadNumeros = 0;
-    int n = 0;
-    
-    do {
-    System.out.print("Este programa te calcula la media de los números introducidos hasta que se marca un número negativo ");
-    System.out.print("Por favor, introduzca los números que quiere introducir de uno en uno: ");
-    n = Integer.parseInt(System.console().readLine());
-    cantidadNumeros++;
-    } while (numero > 0);
-    
-    numero = numero + n;
-    int media = numero / cantidadNumeros;
 
-    if (numero < 0){
+    int numeroTotal = 0;
+    int cantidadNumeros = 0;
+    int numeroPedido = 0;
+
+    do {
+      System.out.println(
+          "Este programa te calcula la media de los números introducidos hasta que se marca un número negativo ");
+      System.out.print("Por favor, introduzca los números que quiere introducir de uno en uno: ");
+      numeroPedido = Integer.parseInt(System.console().readLine());
+      if (numeroPedido < 0) {
+        break;
+      }
+      cantidadNumeros++;
+      numeroTotal = numeroTotal + numeroPedido;
+    } while (numeroPedido > 0);
+
+    int media = numeroTotal / cantidadNumeros;
+
+    if (numeroPedido < 0) {
       System.out.println("La media es " + media);
     }
 
-
-    
   }
 }
