@@ -1,4 +1,4 @@
-import javax.swing.text.Document;
+
 
 /**
  * Realiza un programa que nos diga cuántos dígitos tiene un número introducido
@@ -14,7 +14,8 @@ public class Ejercicio09 {
   public static void main(String[] args) {
    
     int numero = 0;
-    System.out.print("Este programa te dice cuántos dígitos tiene un número introducido por teclado: ");
+    System.out.println("Este programa te dice cuántos dígitos tiene un número introducido por teclado: ");
+    System.out.print("Introduzca el número: ");
     numero = Integer.parseInt(System.console().readLine());
 
     
