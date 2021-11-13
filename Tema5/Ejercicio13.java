@@ -1,41 +1,31 @@
 
 /**
- * Escribe un programa que lea una lista de diez números y determine cuántos
- * son positivos, y cuántos son negativos.
+ * Escribe un programa que lea una lista de diez números y determine cuántos son
+ * positivos, y cuántos son negativos.
  *
  */
-public class Ejercicio12 {
+public class Ejercicio13 {
   public static void main(String[] args) {
 
-    int cantidadTerminos = 0;
+    System.out.println("Este programa lee una lista de diez números y dice cuantos son negativos y cuantos positivos ");
 
-    System.out.println("Este programa la cantidad de términos de la serie de Fibonacci que se soliciten ");
-    System.out.print("Por favor, introduzca la cantidad de términos que quiere conocer: ");
-    cantidadTerminos = Integer.parseInt(System.console().readLine());
+    int numero = 0;
+    int cantidadIntroduzca = 0;
+    int cantidadPositivos = 0;
+    int cantidadNegativos = 0;
+    for (cantidadIntroduzca = 10; cantidadIntroduzca > 0;) {
+      System.out.print("Por favor, introduzca una lista de diez números, tanto positivos como negativos: ");
+      numero = Integer.parseInt(System.console().readLine());
+      cantidadIntroduzca--;
 
-    int numero1 = 0;
-    int numero2 = 0;
-    switch (cantidadTerminos){
-      case 1:
-        System.out.print("0");
-        break;
-        
-        case 2:
-        System.out.print("0 1");
-        break;
-        default:
-          System.out.print("0 1");
-          numero1 = 0;
-          numero2 = 1;
-          int cadena;
-          while (cantidadTerminos > 2){
-            cadena = numero1 + numero2;
-            numero1 = numero2;
-            numero2 = cadena;
-            System.out.print(" " +numero2);
-            cantidadTerminos--;
-          }
+      if (numero > 0) {
+        cantidadPositivos++;
+      } else {
+        cantidadNegativos++;
+      }
+
     }
-    System.out.println("");
+    System.out.println("Hay " + cantidadPositivos + " números positivos");
+    System.out.println("Hay " + cantidadNegativos + " números negativos");
   }
 }
