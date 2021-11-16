@@ -1,52 +1,40 @@
 
 /**
  * Realiza un programa que pinte una pirámide por pantalla. La altura se debe
- * pedir por teclado. El carácter con el que se pinta la pirámide también se debe
- * pedir por teclado.
+ * pedir por teclado. El carácter con el que se pinta la pirámide también se
+ * debe pedir por teclado.
  * 
  */
 public class Ejercicio19 {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    System.out
-        .println("Este programa pinta una pirámide con una altura y un carácter introducido por teclado");
-    System.out.print("Introduce la altura: ");
-    int altura = Integer.parseInt(System.console().readLine());
+    System.out.print("Por favor, introduzca la altura de la pirámide: ");
+    int altura= Integer.parseInt(System.console().readLine());
 
-    System.out.print("Introduce el carácter: ");
-    String caracter = System.console().readLine().toLowerCase();
+    System.out.print("Introduzca el carácter de relleno: ");
+    String caracter= System.console().readLine();
 
-    int posicionPico = altura / 2;
-    int posicionFilas = altura / 2;
+    int planta = 1;
+    int longitudDeLinea = 1;
+    int espacios = altura - 1;
 
+    while (planta <= altura) {
 
-   
-    do {
-     
-      System.out.println(caracter);
-      altura--;
-      System.out.println(caracter);
-    } while (altura > 0);
-    
-    
-    int base = altura * 2;
-    while (base > 0){
-    System.out.print(caracter + " ");
-    base--;
-    }    
-
-    /** 
-    do {
-      do {
-        
+      // inserta espacios
+      for (int i = 1; i <= espacios; i++) {
         System.out.print(" ");
-        posicionPico--;
-        
-      } while (posicionPico >= 0);
+      }
 
-      System.out.println(caracter);
-      altura--;
-    } while (altura > 0);
- */
+      // pinta la línea
+      for (int i = 1; i <= longitudDeLinea; i++) {
+        System.out.print(caracter);
+      }
+
+      System.out.println();
+
+      planta++;
+      espacios--;
+      longitudDeLinea += 2;
+    }
   }
 }
