@@ -33,7 +33,7 @@ public class Ejercicio24 {
       for (i = altura; i > 0; i-- ) {
         System.out.print(i);
       }
-
+    
       System.out.println();
 
       altura++;

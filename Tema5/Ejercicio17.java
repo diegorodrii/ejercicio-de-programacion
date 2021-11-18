@@ -13,7 +13,7 @@ public class Ejercicio17 {
 
     int suma = numero;
     int numeroSumas = 100;
-    int sumaTotal = 0;
+    
     if (numero > 0){
       while (numeroSumas > 0) {
         numeroSumas--;
