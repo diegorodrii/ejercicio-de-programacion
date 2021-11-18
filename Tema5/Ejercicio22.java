@@ -10,18 +10,16 @@ public class Ejercicio22 {
     int numero = 2;
     System.out.print(numero + " ");
     do {
-      
-      
-      
+
       {
-      if (numero >= 100) {
-        break;
+        if (numero >= 100) {
+          break;
+        }
+        numero++;
       }
-      numero++;
-      }
-      
+
       System.out.print(numero + " ");
 
-  }while (numero >= 2);
-}
+    } while (numero >= 2);
+  }
 }
