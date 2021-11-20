@@ -9,7 +9,7 @@
  */
 public class Ejercicio21 {
   public static void main(String[] args) {
-
+    System.out.println("Este programa dice cuantos números se han introducido, la media de los impars y el mayor de los pares ");
     int numeroTotal = 0;
     int cantidadNumeros = 0;
     int numeroPedido = 0;
@@ -17,7 +17,6 @@ public class Ejercicio21 {
     int mayorPar = 0;
     
     do {
-      System.out.println("Este programa dice cuantos números se han introducido, la media de los impars y el mayor de los pares ");
       System.out.print("Por favor, introduzca los números que quiere introducir de uno en uno: ");
       numeroPedido = Integer.parseInt(System.console().readLine());
       

@@ -1,4 +1,4 @@
-import javax.swing.text.Document;
+
 
 /**
  * Realiza el control de acceso a una caja fuerte. La combinación será un número
