@@ -12,14 +12,23 @@ public class Ejercicio25 {
     System.out.print("Por favor, introduce el número: ");
     int numero = Integer.parseInt(System.console().readLine());
     
-    int divisor = 10;
+    int modulo = 10;
     int obtencionReves = 0;
-    while (obtencionReves < 0) {
+    int divisor = 1;
+    System.out.print("El número al revés es: " );
+    do  {
 
-      obtencionReves = numero % divisor;
+      obtencionReves = numero % modulo;
+      obtencionReves = obtencionReves / divisor;
+      if (obtencionReves <= 0){
+        break;
+      }
+      modulo = (modulo * 10);
       divisor = divisor * 10;
-      System.out.print("El número al revés es: " + obtencionReves);
-    }
+      System.out.print(obtencionReves);
+
+    } while (obtencionReves > 0);
+    
     
   }
 }
