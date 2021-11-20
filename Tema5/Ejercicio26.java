@@ -1,10 +1,11 @@
 
 /**
- * Realiza un programa que pida un número por teclado y que luego muestre ese
- * número al revés.
+ * Realiza un programa que pida primero un número y a continuación un dígito. El
+ * programa nos debe dar la posición (o posiciones) contando de izquierda a
+ * derecha que ocupa ese dígito en el número introducido.
  * 
  */
-public class Ejercicio25 {
+public class Ejercicio26 {
   public static void main(String[] args) {
 
     System.out.println("Este programa imprime el número introducido al revés");
