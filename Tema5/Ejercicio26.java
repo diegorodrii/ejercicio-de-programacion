@@ -8,34 +8,23 @@
 public class Ejercicio26 {
   public static void main(String[] args) {
 
-    System.out.println("Este programa imprime el número introducido al revés");
+    System.out.println("Este programa pide un número y después un dígito para conocer la posición que éste ocupa en el número");
     System.out.print("Por favor, introduce el número: ");
     int numero = Integer.parseInt(System.console().readLine());
+    System.out.print("Por favor, introduce el digito: ");
+    int digito = Integer.parseInt(System.console().readLine());
 
-    int modulo = 10;
-    int obtencionReves = 0;
-    int divisor = 1;
-    System.out.print("El número al revés es: ");
-    do {
-
-      obtencionReves = numero % modulo;
-      obtencionReves = obtencionReves / divisor;
-
-      modulo = (modulo * 10);
-      divisor = divisor * 10;
-      
-      if (obtencionReves <= 0) {
-        obtencionReves = numero % modulo;
-        obtencionReves = obtencionReves / divisor;
-        if (obtencionReves <= 0) {
-          break;
-        } else{
-          obtencionReves = 0;
-        }
+    int posicionDigito = 0;
+    do  {
+      numero = numero / 10;
+      if (numero == digito){
+        System.out.println("El número aparece en la posición");
       }
-      System.out.print(obtencionReves);
-
-    } while (obtencionReves >= 0);
+      posicionDigito++;
+    } while (numero != digito);
+    if (numero != digito){
+      System.out.println("El dígito no aparece en el número");
+    }
 
   }
 }

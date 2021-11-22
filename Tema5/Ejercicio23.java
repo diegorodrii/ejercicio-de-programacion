@@ -18,14 +18,12 @@ public class Ejercicio23 {
       System.out.println("Introduce valores para sumarlos y superar el valor 10000: ");
       numeroPedido = Integer.parseInt(System.console().readLine());
 
-      if (numeroTotal >= 10000) {
-        break;
-      }
-      numeroTotal = numeroPedido;
+      
+      
       numeroTotal = numeroTotal + numeroPedido;
       cantidadNumeros++;
 
-    } while (numeroPedido >= 0);
+    } while (numeroTotal <= 10000);
     System.out.println("El número total conseguido es: " + numeroTotal);
     System.out.println("La cantidad de números introducidos es: " + cantidadNumeros);
     System.out.println("La media del total conseguido es: " + numeroTotal / cantidadNumeros);
