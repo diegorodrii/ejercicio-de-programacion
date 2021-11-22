@@ -14,16 +14,25 @@ public class Ejercicio26 {
     System.out.print("Por favor, introduce el digito: ");
     int digito = Integer.parseInt(System.console().readLine());
 
+    int divisor = 1;
+    int modulo = 10;
     int posicionDigito = 0;
+    int division = 0;
     do  {
-      numero = numero / 10;
-      if (numero == digito){
-        System.out.println("El número aparece en la posición");
+      division = numero % modulo;
+      division = numero / divisor;
+      
+      modulo = (modulo * 10);
+      divisor = divisor * 10;
+      if (division == digito){
+        System.out.println("El número aparece en la posición " + posicionDigito);
       }
       posicionDigito++;
+      
     } while (numero != digito);
     if (numero != digito){
       System.out.println("El dígito no aparece en el número");
+      
     }
 
   }
