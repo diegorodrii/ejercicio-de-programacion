@@ -11,16 +11,21 @@ public class Ejercicio28 {
     System.out.println("Este programa calcula el factorial de un número");
     System.out.print("Por favor, introduce el número: ");
     int numero = Integer.parseInt(System.console().readLine());
-    int i = 1;
-    int multiplo = 0;
 
+    
+    int multiplo = 1;
+    int resultado = 1;
+
+    resultado = multiplo * numero;
     while (multiplo < numero) {
-      multiplo = multiplo + i * 3;
-      if (multiplo > numero){
-        break;
-      }
-      System.out.print(multiplo + " ");
+  
+      resultado = resultado * multiplo;
+      
+      multiplo++;
+      
+      
     } 
+    System.out.print(numero + "! = " + resultado);
     System.out.println();
   }
 }
