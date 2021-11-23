@@ -8,32 +8,39 @@
 public class Ejercicio26 {
   public static void main(String[] args) {
 
-    System.out.println("Este programa pide un número y después un dígito para conocer la posición que éste ocupa en el número");
-    System.out.print("Por favor, introduce el número: ");
-    int numero = Integer.parseInt(System.console().readLine());
-    System.out.print("Por favor, introduce el digito: ");
+    System.out.print("Introduzca un número entero: ");
+    int numeroIntroducido = Integer.parseInt(System.console().readLine());
+
+    System.out.print("Introduzca un dígito: ");
     int digito = Integer.parseInt(System.console().readLine());
 
-    int divisor = 1;
-    int modulo = 10;
-    int posicionDigito = 0;
-    int division = 0;
-    do  {
-      division = numero % modulo;
-      division = numero / divisor;
-      
-      modulo = (modulo * 10);
-      divisor = divisor * 10;
-      if (division == digito){
-        System.out.println("El número aparece en la posición " + posicionDigito);
-      }
-      posicionDigito++;
-      
-    } while (numero != digito);
-    if (numero != digito){
-      System.out.println("El dígito no aparece en el número");
-      
+    System.out.print("Contando de izquierda a derecha, el " + digito + " aparece dentro de " + numeroIntroducido + " en las siguientes posiciones: ");
+    
+    // le da la vueta al número y calcula la longitud
+    int numero = numeroIntroducido;
+    int volteado = 0;
+    int longitud = 0;
+    int posicion = 1;
+    
+    if (numero == 0) {
+      longitud = 1;
     }
+    
+    while (numero > 0) {
+      volteado = (volteado * 10) + (numero % 10);
+      numero /= 10;
+      longitud++;
+    } // while
+        
+    // comprueba la posición
+    while (volteado > 0) {
+      if ((volteado % 10) == digito) {
+        System.out.print(posicion + " ");
+      }
+      volteado /= 10;
+      posicion++;
+    } // while
 
+    System.out.println();
   }
 }
