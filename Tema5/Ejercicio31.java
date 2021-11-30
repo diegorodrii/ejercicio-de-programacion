@@ -6,7 +6,6 @@
  */
 public class Ejercicio31 {
   public static void main(String[] args) {
-
     System.out.println("Este programa dibuja una L según la altura introducida");
     System.out.println("Por favor, introduzca la altura: ");
     int altura = Integer.parseInt(System.console().readLine());
@@ -25,6 +24,7 @@ public class Ejercicio31 {
       } while (numeroAsteriscosHorizontal <= (numeroAsteriscosAltura/2));
       System.out.print("* ");
       System.out.println();
+    
     }
-  }
-}
+
+
