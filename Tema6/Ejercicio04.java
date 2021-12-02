@@ -1,11 +1,11 @@
 
 /* 
- * Igual que el ejercicio anterior pero con la baraja española. Se utilizará la baraja
- * de 40 cartas: 2, 3, 4, 5, 6, 7, sota, caballo, rey y as.
+ * Muestra 20 números enteros aleatorios entre 0 y 10 (ambos incluidos) separa-
+ * dos por espacios.
  */
-public class Ejercicio03 {
+public class Ejercicio04 {
   public static void main(String[] args) {
-    System.out.println("Este programa muestra el nombre de una carta de la baraja española");
+    System.out.println("Este programa muestra el nombre de una carta de la baraja francesa");
 
     int numero;
     String carta;
