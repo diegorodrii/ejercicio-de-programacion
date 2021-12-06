@@ -11,22 +11,50 @@ public class Ejercicio07 {
     int numero = 0;
 
     int numeroFila = 0;
-    for (int i = 1; i <= 42; i++) {
-      numero = ((int) (Math.random() * 3));
+    for (int i = 1; i <= 14; i++) {
+      
       numeroFila++;
-      System.out.print(numeroFila + ". ");
-      if (numero == 1) {
-        System.out.print("|1    |  ");
+      if (numeroFila <=9) {
+        System.out.print(numeroFila + ".  ");
+      } else {
+        System.out.print(numeroFila + ". ");
       }
-      if (numero == 2) {
-        System.out.print("|  X  |  ");
-      }
-      if (numero == 3) {
-        System.out.print("|    2|  ");
+     
+      for (int o = 1; o <= 3; o++) {
+        numero = ((int) (Math.random() * 3));
+        if (numero == 0) {
+          System.out.print("|1    |  ");
+        }
+        if (numero == 1) {
+          System.out.print("|  X  |  ");
+        }
+        if (numero == 2) {
+          System.out.print("|    2|  ");
+        }
       }
       System.out.println();
 
     }
+    int pleno = ((int) (Math.random() * 4));
+    
+    switch (pleno){
+      case 3: 
+      
+      System.out.print("PLENO AL 15 - LOCAL... M" );  
+      break;
 
+      default: System.out.print("PLENO AL 15 - LOCAL... " + pleno );  
+    } 
+    
+    pleno = ((int) (Math.random() * 4));
+    switch (pleno){
+      case 3: 
+  
+      System.out.print("   VISITANTE... M");
+      break;
+      default: System.out.print("   VISITANTE..." + pleno);
+    }
+   
+    System.out.println("");
   }
 }
