@@ -20,6 +20,7 @@ public class Ejercicio19 {
       int numeroFinal = numero + numeroSuma;
       System.out.println(numeroFinal + " ");
       if ((numeroFinal < menorImpar) && ((numeroFinal % 2 == 1) || (numeroFinal % 2 == -1))){
+        
         menorImpar = numeroFinal;
       }
       if ((numeroFinal > mayorPar) && (numeroFinal % 2 == 0)){
