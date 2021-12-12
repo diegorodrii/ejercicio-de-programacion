@@ -24,7 +24,7 @@ public class Ejercicio01 {
     num[9] = 120;
 
     for (int i = 0; i < 12; i++){
-      System.out.println(num[i]);
+      System.out.println(i + "  " +num[i]);
     } 
     
 
