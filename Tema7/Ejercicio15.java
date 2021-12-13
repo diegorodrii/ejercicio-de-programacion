@@ -56,12 +56,12 @@ public class Ejercicio15 {
       }else if (clientes == -1){
         System.out.println("Gracias. Hasta pronto.");
       }else {
-        boolean vacia = true;
+        boolean vacia = false;
         int iVacia=0;
         //Comprueba si hay una mesa libre donde el grupo de clientes se pueda sentar
         for (mesaLibre=9; mesaLibre >= 0;mesaLibre--){
           if (ocupacion[mesaLibre]==0){
-            vacia = false;
+            vacia = true;
             iVacia=mesaLibre;
           }
         }
@@ -73,7 +73,7 @@ public class Ejercicio15 {
             iHueco=i;
           }
         }
-        if (!vacia){
+        if (vacia){
           //Si hay hueco para el grupo les dira.:
           System.out.println("Por favor, siéntense en la mesa número " + (iVacia + 1));
           ocupacion[iVacia]+=clientes;
