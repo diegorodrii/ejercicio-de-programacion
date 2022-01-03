@@ -8,7 +8,7 @@
  */
 public class Ejercicio01 {
   public static void main(String[] args) {
-    System.out.println("Este programa muestra una tabla con sus respectivos valores.");
+    System.out.println("Este programa muestra el contenido de todos los elementos del array.");
 
     int [][] num = new int [3][6];
 
