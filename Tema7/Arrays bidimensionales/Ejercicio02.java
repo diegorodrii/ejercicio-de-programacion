@@ -1,45 +1,56 @@
 
 /* 
- * Define un array de números enteros de 3 filas por 6 columnas con nombre num
- * y asigna los valores según la siguiente tabla. Muestra el contenido de todos
- * los elementos del array dispuestos en forma de tabla como se muestra en la
- * figura.
+ * Escribe un programa que pida 20 números enteros. Estos números se deben
+ * introducir en un array de 4 filas por 5 columnas. El programa mostrará las
+ * sumas parciales de filas y columnas igual que si de una hoja de cálculo se
+ * tratara. La suma total debe aparecer en la esquina inferior derecha.
  * 
  */
-public class Ejercicio01 {
+public class Ejercicio02 {
   public static void main(String[] args) {
-    System.out.println("Este programa muestra el contenido de todos los elementos del array.");
-
-    int [][] num = new int [3][6];
-
-    num [0][0] = 0;
-    num [0][1] = 30;
-    num [0][2] = 2;
-    num [0][5] = 5;
-    num [1][0] = 75;
-    num [1][4] = 0;
-    num [2][2] = -2;
-    num [2][3] = 9;
-    num [2][5] = 11;
-
+    int[][] num = new int[4][5]; // array de 4 filas por 5 columnas
     
     int fila;
     int columna;
-
-    System.out.print("       ");
-    for(columna = 0; columna < 6; columna++) {
-      System.out.print("   Columna " + columna);
-    }
-    for(fila = 0; fila < 3; fila++) {
-
-      System.out.print("\nFila " + fila);
-  
-      for(columna = 0; columna < 6; columna++) {
-        System.out.printf("%9d   ", num[fila][columna]);
-      
+    
+    // Lee los datos de teclado
+    System.out.println("Por favor, introduzca los números (enteros) en el array");
+    for(fila = 0; fila < 4; fila++) {
+      for(columna = 0; columna < 5; columna++) {
+        System.out.print("Fila " + fila + ", columna " + columna + ": ");
+        num[fila][columna] = Integer.parseInt(System.console().readLine());
       }
     }
-    System.out.println();
+
+    // Muestra los datos y las sumas parciales de las filas
+    int sumaFila;
+    for(fila = 0; fila < 4; fila++) {
+      sumaFila = 0;
+      for(columna = 0; columna < 5; columna++) {
+        System.out.printf("%7d   ", num[fila][columna]);
+        sumaFila += num[fila][columna];
+      }
+      System.out.printf("|%7d\n", sumaFila);
+    }
+    
+    // Muestra las sumas parciales de las columnas
+    for(columna = 0; columna < 5; columna++) {
+      System.out.print("----------");
+    }
+    System.out.println("-----------");
+
+    int sumaColumna;
+    int sumaTotal = 0;
+    for(columna = 0; columna < 5; columna++) {
+      sumaColumna = 0;
+      for(fila = 0; fila < 4; fila++) {
+        sumaColumna += num[fila][columna];
+      }
+
+      sumaTotal += sumaColumna;
+      System.out.printf("%7d   ", sumaColumna);
+    }
+    System.out.printf("|%7d   ", sumaTotal);
   }
 }
 
