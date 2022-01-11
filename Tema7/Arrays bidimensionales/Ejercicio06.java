@@ -1,7 +1,9 @@
 
 /* 
- * Modifica el programa anterior de tal forma que no se repita ningún número en
- * el array.
+ * Realiza un programa que rellene un array de 6 filas por 10 columnas con
+ * números enteros positivos comprendidos entre 0 y 1000 (ambos incluidos). A
+ * continuación, el programa deberá dar la posición tanto del máximo como del
+ * mínimo.
  * 
  */
 public class Ejercicio06 {
@@ -20,7 +22,9 @@ public class Ejercicio06 {
     int filaMaximo = 0;
     int columnaMaximo = 0;
 
-    
+    boolean repetido;
+    int i;
+
 
     System.out.print("\n      ");
     for(columna = 0; columna < 10; columna++) {
@@ -32,12 +36,22 @@ public class Ejercicio06 {
     for(columna = 0; columna < 10; columna++) {
       System.out.print("──────");
     }
-    System.out.println("┐");
+    System.out.println("┓");
     
     for(fila = 0; fila < 6; fila++) {
       System.out.print("  " + fila + " │");
       for(columna = 0; columna < 10; columna++) {
-        num[fila][columna] = (int)(Math.random() * 1001);
+        do {
+          num[fila][columna] = (int)(Math.random() * 1001);
+
+          // Comprueba si el número generado ya está en el array.
+          repetido = false;
+          for (i = 0; i < 10 * fila + columna; i++) {
+            if (num[fila][columna] == num[i / 10][i % 10]) {
+              repetido = true;
+            }
+          }
+        } while (repetido);
         
         System.out.printf("%5d ", num[fila][columna]);
         Thread.sleep(100);
