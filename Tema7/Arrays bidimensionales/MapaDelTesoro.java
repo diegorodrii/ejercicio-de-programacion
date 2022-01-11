@@ -70,7 +70,7 @@ public class MapaDelTesoro {
       x = Integer.parseInt(s.nextLine());
     
       System.out.print("Coordenada Y: ");
-      y = Integer.parseInt(s.nextLine());
+      y = Integer.prseInt(s.nextLine());
       
   
       
