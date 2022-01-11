@@ -66,7 +66,7 @@ public class MapaDelTesoro {
      
 
       /* Pide las coordenadas*/
-      System.ou.print("Coordenada X: " );
+      System.out.print("Coordenada X: " );
       x = Integer.parseInt(s.nextLine());
     
       System.out.print("Coordenada Y: ");
