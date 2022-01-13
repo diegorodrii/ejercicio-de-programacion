@@ -49,6 +49,8 @@ public class MapaDelTesoro {
 
     boolean acierto = true;
     
+    
+    
     do {
       for (y = 3; y >= 0; y--){
         System.out.print(y + " |");
@@ -72,7 +74,7 @@ public class MapaDelTesoro {
       System.out.print("Coordenada Y: ");
       y = Integer.parseInt(s.nextLine());
       
-  
+      for (x = )
       
       
      
