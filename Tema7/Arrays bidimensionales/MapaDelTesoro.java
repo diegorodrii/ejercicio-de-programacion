@@ -52,10 +52,10 @@ public class MapaDelTesoro {
 
     do {
       for (y = 3; y >= 0; y--) {
-        System.out.print(y + " |");
+        System.out.print(y + "|");
         for (x = 0; x < 5; x++) {
           if (cuadrante[x][y] == intento) {
-            System.out.print("X");
+            System.out.print("X ");
           } else {
             System.out.print("  ");
           }
@@ -94,7 +94,7 @@ public class MapaDelTesoro {
 
     // pinta el cuadrante
     for (y = 3; y >= 0; y--){
-      System.out.print(y + "");
+      System.out.print(y + "| ");
       for (x = 0; x < 5; x++){
         switch(cuadrante[x][y]){
           case vacio:
@@ -115,6 +115,6 @@ public class MapaDelTesoro {
       }
       System.out.println();
     }
-    System.out.println("  ----------\n  0 1 2 3 4\n");
+    System.out.println("  ----------\n   0 1 2 3 4\n");
     }
 }
