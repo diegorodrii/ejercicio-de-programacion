@@ -77,6 +77,9 @@ public class Ejercicio07 {
       switch(cuadrante[x][y]) {
         case VACIO:
           cuadrante[x][y] = INTENTO;
+          if ((Math.abs(x - minaX) < 2) && (Math.abs(y - minaY) < 2)) {
+            System.out.println("Cuidado, hay una mina cerca.");
+          }
           break;
         case MINA:
           System.out.println("Lo siento, has perdido.");
