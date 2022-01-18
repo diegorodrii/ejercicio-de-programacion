@@ -20,7 +20,15 @@
  */
 public class Ej3Examen {
     public static void main(String[] args) {
-        System.out.print(linea(4, '%','$' ));
+        System.out.print(linea(7, '*',' ' ));
+        System.out.print("Por favor, introduzca la altura de la pirámide: ");
+        int alturaIntroducida = Integer.parseInt(System.console().readLine());
+        int espaciosPorDelante = alturaIntroducida - 1;
+        int espaciosInternos = 0;
+    }
+
+    public static String espacios (int n){
+        return linea (n,' ', ' ');
     }
 
     public static String linea(int longitud, char extremo, char relleno){
