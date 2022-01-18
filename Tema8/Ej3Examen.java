@@ -4,14 +4,14 @@
  * extremos y otro carácter de relleno.
  * public static String linea(int longitud, char extremo, char relleno)
  * Ejemplos:
- * linea(5, ‘*’, ‘ ‘) devuelve “* *”
- * linea(5, ‘*’, ‘*‘) devuelve “*****”
- * linea(6, ‘X’, ‘-‘) devuelve “X----X”
- * linea(3, ‘&’, ‘$‘) devuelve “&$&”
- * linea(2, ‘&’, ‘$‘) devuelve “&&”
- * linea(1, ‘&’, ‘$‘) devuelve “&”
- * linea(0, ‘&’, ‘$‘) devuelve “”
- * linea(-3, ‘&’, ‘$‘) devuelve “”
+ * linea(5, ‘*’, ‘ ‘) devuelve “* *
+ * linea(5, ‘*’, ‘*‘) devuelve “*****
+ * linea(6, ‘X’, ‘-‘) devuelve “X----X
+ * linea(3, ‘&’, ‘$‘) devuelve “&$&
+ * linea(2, ‘&’, ‘$‘) devuelve “&&
+ * linea(1, ‘&’, ‘$‘) devuelve “&
+ * linea(0, ‘&’, ‘$‘) devuelve “
+ * linea(-3, ‘&’, ‘$‘) devuelve “
  * Utiliza esta función para pintar una pirámide hueca cuya altura se pide por
  * teclado. Podemos suponer
  * que el usuario va a introducir un número mayor o igual a 1.
@@ -20,24 +20,49 @@
  */
 public class Ej3Examen {
     public static void main(String[] args) {
-        System.out.print(linea(7, '*',' ' ));
-        System.out.print("Por favor, introduzca la altura de la pirámide: ");
+        System.out.println("Introduzca una altura: ");
         int alturaIntroducida = Integer.parseInt(System.console().readLine());
-        int espaciosPorDelante = alturaIntroducida - 1;
-        int espaciosInternos = 0;
-    }
+        System.out.println(espacios(alturaIntroducida));
+        int longitud = 1;
+        char extremo = '*';
+        char relleno = ' ';
 
-    public static String espacios (int n){
-        return linea (n,' ', ' ');
-    }
+        int numEspacios = alturaIntroducida;
+        int base = 1;
 
-    public static String linea(int longitud, char extremo, char relleno){
-            String resultado = "" + extremo;
-            for (int j = 0; j < longitud-2; j++) {
-                resultado += "" + relleno;
+        for (int i = 0; i < alturaIntroducida-1; i++) {
+            System.out.print(espacios(numEspacios));
+            System.out.println(extremo);
+            
+            
+            if (base <= alturaIntroducida - 1){
+                System.out.print(linea(longitud, extremo, relleno));
+            } else {
+                relleno = '*';
+                System.out.print(linea(longitud, extremo, relleno));
             }
-            return resultado += "" + extremo;
-        
+            numEspacios--;
+            longitud += 2;
+            base++;
+        }
     }
+
+    public static String espacios(int n) {
+        return linea(n, ' ', ' ');
+    }
+
+    public static String linea(int longitud, char extremo, char relleno) {
+        System.out.print(extremo);
+        for (int j = 0; j < longitud - 2; j++) {
+            System.out.print(relleno);
+        }
+        if (longitud > 1){
+            System.out.print("");
+        } else {
+        System.out.print(extremo);
+        }
+        return "";
+    }
+    
 
 }
