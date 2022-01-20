@@ -1,61 +1,65 @@
 package misfunciones;
+
 /**
  * Funciones matemáticas variadas
  * 
  */
 
 public class Matematicas {
+
+  // Funciones ///////////////////////////
+  /**
+   * 
+   * @param inicio
+   * @param fin
+   * @return
+   */
+
+  public static boolean esCapicua(int numeroIntroducido) {
+    int numero = numeroIntroducido;
+    int voltear = 0;
+    int contador = 0;
+    while (numero > 0) {
+
+      voltear = (voltear * 10) + (numero % 10);
+      numero /= 10;
+      contador++;
+    }
     /**
-     * Genera un valor entero aleatorio entre
-     * <code>
-     * 
-     * @param args
-     */
-    public static void main(String[] args) {
-        int[] numeros = new int[50];
-    
-        for (int i = 0; i < numeros.length; i++) {
-          numeros[i] = aleatorio(1, 100);
-        }
-        
-        for (int n : numeros) {
-          System.out.print(n + "  ");
-        }
-    
-        System.out.println("\nPrimos:");
-    
-        for (int n : numeros) {
-          if (esPrimo(n)) {
-            System.out.print(n + "  ");
-          } 
-        }
+     * Comparo si el numero dado la vuelta es igual al numero que he introducido
+     **/
+    if ((voltear == numeroIntroducido) && (contador > 1)) {
+      return true;
+
+    } else {
+      return false;
+    }
+
+  }
+
+  public static int aleatorio(int inicio, int fin) {
+    return (int) (Math.random() * (fin - inicio + 1)) + inicio;
+  }
+
+  /**
+   * 
+   * @param numero entero positivo
+   * @return <code>true</code> si <code>numero</code> es primo
+   */
+  public static boolean esPrimo(int numeroIntroducido) {
+    boolean esPrimo = true;
+
+    for (int i = 2; i < numeroIntroducido; i++) {
+      if ((numeroIntroducido % i) == 0) {
+        return false;
       }
-    
-      // Funciones ///////////////////////////
-      /**
-       * 
-       * @param inicio
-       * @param fin
-       * @return
-       */
-      public static int aleatorio(int inicio, int fin) {
-        return (int)(Math.random() * (fin - inicio + 1)) + inicio;
-      }
-      /**
-       * 
-       * @param numero entero positivo
-       * @return <code>true</code> si <code>numero</code> es primo
-       */
-      public static boolean esPrimo(int numero) {
-        boolean esPrimo = true;
-        
-        for (int i = 2; i < numero; i++) {
-          if ((numero % i) == 0) {
-            esPrimo = false;
-          }
-        }
-        
-        return esPrimo;
-      }
-    
+    }
+    if (esPrimo) {
+      return true;
+    } else {
+      return false;
+    }
+
+
+  }
 }
