@@ -22,7 +22,9 @@ public class Ej3Examen {
     public static void main(String[] args) {
         System.out.println("Introduzca una altura: ");
         int alturaIntroducida = Integer.parseInt(System.console().readLine());
+
         System.out.println(espacios(alturaIntroducida));
+        
         int longitud = 1;
         char extremo = '*';
         char relleno = ' ';
@@ -51,17 +53,18 @@ public class Ej3Examen {
         return linea(n, ' ', ' ');
     }
 
-    public static String linea(int longitud, char extremo, char relleno) {
+    public static String linea(int longitud, char extremo, char relleno){
         System.out.print(extremo);
-        for (int j = 0; j < longitud - 2; j++) {
+        for (int i = 0; i < longitud -2; i++){
             System.out.print(relleno);
         }
         if (longitud > 1){
-            System.out.print("");
-        } else {
-        System.out.print(extremo);
+            System.out.print(extremo);
         }
         return "";
+    }
+    public static String espaciosPorDelante(int numespacios,char relleno){
+        return linea(numespacios,' ',relleno);
     }
     
 

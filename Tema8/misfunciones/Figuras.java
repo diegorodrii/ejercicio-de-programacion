@@ -20,6 +20,4 @@ public class Figuras {
     }
 }
 
-public class Figuras {
-    
-}
+
