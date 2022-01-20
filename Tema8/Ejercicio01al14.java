@@ -59,6 +59,10 @@ public class Ejercicio01al14 {
     } else {
       System.out.println("El número " + numeroIntroducido + " no es primo");
     }
+
+    //siguientePrimo
+
+    System.out.println("El siguiente número primo más pequeño es: " + Matematicas.siguientePrimo(numeroIntroducido));
     
   }
 

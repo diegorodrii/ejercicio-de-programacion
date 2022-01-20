@@ -59,7 +59,18 @@ public class Matematicas {
     } else {
       return false;
     }
+  }
 
+  public static int siguientePrimo(int numeroIntroducido) {
+    int x = numeroIntroducido + 1;
 
+    do {
+
+      numeroIntroducido++;
+      
+    
+    } while (!Matematicas.esPrimo(numeroIntroducido));
+
+    return numeroIntroducido;
   }
 }
