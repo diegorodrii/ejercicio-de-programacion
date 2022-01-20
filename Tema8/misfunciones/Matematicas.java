@@ -62,7 +62,6 @@ public class Matematicas {
   }
 
   public static int siguientePrimo(int numeroIntroducido) {
-    int x = numeroIntroducido + 1;
 
     do {
 
@@ -72,5 +71,9 @@ public class Matematicas {
     } while (!Matematicas.esPrimo(numeroIntroducido));
 
     return numeroIntroducido;
+  }
+
+  public static int potencia (int numeroPotencia){
+
   }
 }
