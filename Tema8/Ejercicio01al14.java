@@ -38,7 +38,7 @@ import misfunciones.Figuras;
 public class Ejercicio01al14 {
   // Programa principal //////////////////////////////////////
   public static void main(String[] args) {
-    
+
     // esCapicua
 
     Scanner s = new Scanner(System.in);
@@ -51,7 +51,6 @@ public class Ejercicio01al14 {
       System.out.println("El " + numeroIntroducido + " no es capicua.");
     }
 
-
     // esPrimo
 
     if (Matematicas.esPrimo(numeroIntroducido)) {
@@ -60,23 +59,33 @@ public class Ejercicio01al14 {
       System.out.println("El número " + numeroIntroducido + " no es primo");
     }
 
-    //siguientePrimo
+    // siguientePrimo
 
     System.out.println("El siguiente número primo más pequeño es: " + Matematicas.siguientePrimo(numeroIntroducido));
-    
-  }
+
     // potencia
 
+    System.out.print("Introduzca la base: ");
+    int base = Integer.parseInt(s.nextLine());
 
-  System.out.print("Introduzca una base: ");
+    System.out.print("Introduzca el exponente: ");
+    int exponente = Integer.parseInt(s.nextLine());
+    System.out.println("La potencia es: " + Matematicas.potencia(base, exponente));
 
-  System.out.print("Introduzca un exponente: ");
+    // digitos
 
+    System.out.print("Introduzca un número para conocer sus dígitos: ");
+    int num = Integer.parseInt(s.nextLine());
 
+    System.out.println("El número tiene " + Matematicas.digitos(num) + " dígitos");
 
- 
+    // voltea
 
-  
+    System.out.println("Introduzca el número que quiere voltear: ");
+    int numAVoltear = Integer.parseInt(s.nextLine());
 
-  
+    System.out.println("El número volteado es " + Matematicas.voltear(numAVoltear));
+
+  }
+
 }

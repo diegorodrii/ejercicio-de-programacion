@@ -66,14 +66,36 @@ public class Matematicas {
     do {
 
       numeroIntroducido++;
-      
-    
+
     } while (!Matematicas.esPrimo(numeroIntroducido));
 
     return numeroIntroducido;
   }
 
-  public static int potencia (int numeroPotencia){
+  public static int potencia(int base, int exponente) {
+    return (int) (Math.pow(base, exponente));
+  }
 
+  public static int digitos(int num) {
+    int numDigitos = 0;
+    while (num > 0) {
+      num = num / 10;
+      numDigitos++;
+    }
+    return numDigitos;
+  }
+
+  public static int voltear(int numAVoltear) {
+    int numVolteado = 0;
+    while (numAVoltear > 0){
+      
+      
+      numVolteado = (numVolteado * 10) + (numAVoltear % 10);
+      numAVoltear = numAVoltear / 10;
+  
+     
+    }
+    return numVolteado;
+    
   }
 }
