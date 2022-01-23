@@ -81,28 +81,48 @@ public class Ejercicio01al14 {
 
     // voltea
 
-    System.out.println("Introduzca el número que quiere voltear: ");
+    System.out.print("Introduzca el número que quiere voltear: ");
     int numAVoltear = Integer.parseInt(s.nextLine());
 
     System.out.println("El número volteado es " + Matematicas.voltear(numAVoltear));
 
     // posicionN
-    System.out.println("Introduce el número que quiera saber la posición de su dígito: ");
+    System.out.print("Introduce el número que quiera saber la posición de su dígito: ");
     int numN = Integer.parseInt(s.nextLine());
 
-    System.out.println("Introduce la posición que quiere conocer: ");
+    System.out.print("Introduce la posición que quiere conocer: ");
     int N = Integer.parseInt(s.nextLine());
 
     System.out.println("El dígito de la " + N + " posición es " + Matematicas.posicionN(numN, N));
     
     // posicionDeDigito
 
-    System.out.println("Introduce el número que quiera saber la posicion en la que se encuentra el dígito que introduzca: ");
+    System.out.print("Introduce el número que quiera saber la posicion en la que se encuentra el dígito que introduzca: ");
     int numDigito = Integer.parseInt(s.nextLine());
 
-    System.out.println("Introduce el dígito que quiera conocer la posicion en la que se encuentra: ");
+    System.out.print("Introduce el dígito que quiera conocer la posicion en la que se encuentra: ");
     int digito = Integer.parseInt(s.nextLine());
 
     System.out.println("El dígito " + digito + " posición es " + Matematicas.posicionDeDigito(numDigito, digito));
+  
+    // quitaPorDetrás
+
+    System.out.print("Introduce el número al que le quiere eliminar digitos por detrás: ");
+    int numDetras = Integer.parseInt(s.nextLine());
+
+    System.out.print("Introduce cuantos digitos quiere eliminar por detrás: ");
+    int nDigElim = Integer.parseInt(s.nextLine());
+
+    System.out.println("El número se queda así: " + Matematicas.quitaPorDetras(numDetras, nDigElim));
+  
+     // quitaPorDelante
+
+     System.out.print("Introduce el número al que le quiere eliminar digitos por delante: ");
+     int numDelante = Integer.parseInt(s.nextLine());
+ 
+     System.out.print("Introduce cuantos digitos quiere eliminar por delante: ");
+     nDigElim = Integer.parseInt(s.nextLine());
+ 
+     System.out.println("El número se queda así: " + Matematicas.quitaPorDelante(numDelante, nDigElim));
   }
 }

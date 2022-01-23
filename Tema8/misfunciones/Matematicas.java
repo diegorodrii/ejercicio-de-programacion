@@ -149,15 +149,61 @@ public class Matematicas {
    * dentro de un número entero. Si no se encuentra, devuelve -1.
    * 
    * @param numDigito
+   * @param digito
+   * 
    * @return
    */
   public static int posicionDeDigito(int numDigito, int digito) {
     numDigito = Matematicas.voltear(numDigito);
     int posicion = 0;
-    while (numDigito % 10 != digito){
+    while (numDigito % 10 != digito) {
       numDigito = numDigito / 10;
       posicion++;
+      if ((posicion == 0) && (numDigito % 10 != digito)){
+        return -1;
+      }
     }
     return posicion;
+
+  }
+
+  /**
+   * Le quita a un número n dígitos por detrás (por la
+   * derecha).
+   * 
+   * @param numDetras
+   * @param nDigElim
+   * @return
+   */
+  public static int quitaPorDetras(int numDetras, int nDigElim) {
+    numDetras = Matematicas.voltear(numDetras);
+    int x = 0;
+
+    while (nDigElim > 0){
+      x = x * 10 + numDetras % 10;
+      numDetras = numDetras / 10;
+      nDigElim--;
+    }
+    return x;
+  }
+
+    /**
+   * Le quita a un número n dígitos por delante (por la
+   * izquierda).
+   * 
+   * @param numDelante
+   * @param digito
+   * @return
+   */
+  public static int quitaPorDelante(int numDelante, int nDigElim) {
+    numDelante = Matematicas.voltear(numDelante);
+    int x = 0;
+
+    while (nDigElim > 0){
+      x = x * 10 + numDelante % 10;
+      numDelante = numDelante / 10;
+      nDigElim--;
+    }
+    return x;
   }
 }
