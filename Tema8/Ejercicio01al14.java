@@ -136,6 +136,16 @@ public class Ejercicio01al14 {
 
     System.out.println("El número con el dígito pegado queda " + Matematicas.pegaPorDetras(numeroIntroducido, numPegado));
  
+    
+    // pegaPorDelante
+
+    System.out.print("Introduce el número al que le quiere pegar por delante: ");
+    numeroIntroducido = Integer.parseInt(s.nextLine());
+
+    System.out.print("Introduce el dígito que quiere añadir delante del número: ");
+    numPegado = Integer.parseInt(s.nextLine());
+
+    System.out.println("El número con el dígito pegado queda " + Matematicas.pegaPorDelante(numeroIntroducido, numPegado));
  
     }
 }

@@ -212,4 +212,18 @@ public class Matematicas {
     numeroIntroducido = numeroIntroducido * 10 + numPegado;
     return numeroIntroducido;
   }
+
+
+  /**
+   * 
+   * @param numeroIntroducido
+   * @param numPegado
+   * @return
+   */
+  public static int pegaPorDelante(int numeroIntroducido, int numPegado){
+    numeroIntroducido = Matematicas.voltear(numeroIntroducido);
+    numeroIntroducido = numeroIntroducido * 10 + numPegado;
+    numeroIntroducido = Matematicas.voltear(numeroIntroducido);
+    return numeroIntroducido;
+  }
 }
