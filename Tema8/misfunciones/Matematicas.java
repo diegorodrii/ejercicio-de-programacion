@@ -176,15 +176,12 @@ public class Matematicas {
    * @return
    */
   public static int quitaPorDetras(int numDetras, int nDigElim) {
-    numDetras = Matematicas.voltear(numDetras);
-    int x = 0;
 
     while (nDigElim > 0){
-      x = x * 10 + numDetras % 10;
       numDetras = numDetras / 10;
       nDigElim--;
     }
-    return x;
+    return numDetras;
   }
 
     /**
