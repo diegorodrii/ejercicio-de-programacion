@@ -128,10 +128,10 @@ public class Ejercicio01al14 {
  
     // pegaPorDetrás
 
-    System.out.println("Introduce el número al que le quiere pegar por detrás: ");
+    System.out.print("Introduce el número al que le quiere pegar por detrás: ");
     numeroIntroducido = Integer.parseInt(s.nextLine());
 
-    System.out.println("Introduce el dígito que quiere añadir atrás del número: ");
+    System.out.print("Introduce el dígito que quiere añadir atrás del número: ");
     int numPegado = Integer.parseInt(s.nextLine());
 
     System.out.println("El número con el dígito pegado queda " + Matematicas.pegaPorDetras(numeroIntroducido, numPegado));
