@@ -8,6 +8,7 @@ package misfunciones;
 public class Matematicas {
 
   // Funciones ///////////////////////////
+
   /**
    * 
    * @param inicio
@@ -46,6 +47,7 @@ public class Matematicas {
    * @param numero entero positivo
    * @return <code>true</code> si <code>numero</code> es primo
    */
+
   public static boolean esPrimo(int numeroIntroducido) {
     boolean esPrimo = true;
 
@@ -61,6 +63,12 @@ public class Matematicas {
     }
   }
 
+  /**
+   * 
+   * @param numeroIntroducido
+   * @return
+   */
+
   public static int siguientePrimo(int numeroIntroducido) {
 
     do {
@@ -72,9 +80,22 @@ public class Matematicas {
     return numeroIntroducido;
   }
 
+  /**
+   * 
+   * @param base
+   * @param exponente
+   * @return
+   */
+
   public static int potencia(int base, int exponente) {
     return (int) (Math.pow(base, exponente));
   }
+
+  /**
+   * 
+   * @param num
+   * @return
+   */
 
   public static int digitos(int num) {
     int numDigitos = 0;
@@ -85,17 +106,40 @@ public class Matematicas {
     return numDigitos;
   }
 
+  /**
+   * 
+   * @param numAVoltear
+   * @return
+   */
+
   public static int voltear(int numAVoltear) {
     int numVolteado = 0;
-    while (numAVoltear > 0){
-      
-      
+    while (numAVoltear > 0) {
+
       numVolteado = (numVolteado * 10) + (numAVoltear % 10);
       numAVoltear = numAVoltear / 10;
-  
-     
+
     }
     return numVolteado;
-    
+
+  }
+
+  /**
+   * Devuelve el dígito que está en la posición n de un número entero.
+   * Se empieza contando por el 0 y de izquierda a derecha
+   * 
+   * 
+   * @param numN
+   * @param posicion
+   * @return
+   */
+  public static int posicionN(int numN, int posicion) {
+    numN = Matematicas.voltear(numN);
+
+    while(posicion > 0 ){
+      numN = numN / 10;
+      posicion--;
+    }
+    return numN % 10;
   }
 }
