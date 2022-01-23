@@ -147,5 +147,18 @@ public class Ejercicio01al14 {
 
     System.out.println("El número con el dígito pegado queda " + Matematicas.pegaPorDelante(numeroIntroducido, numPegado));
  
+
+    // trozoDeNumero
+
+
+    // juntaNumeros
+    System.out.println("Introduce el número al que quiere pegar el trozo de número: ");
+    numeroIntroducido = Integer.parseInt(s.nextLine());
+
+    System.out.println("Introduce el número que quiere pegar: ");
+    int numPegar = Integer.parseInt(s.nextLine());
+
+    System.out.println("El número se queda como: " + Matematicas.juntaNumeros(numeroIntroducido, numPegar));
+
     }
 }

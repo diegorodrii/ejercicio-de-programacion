@@ -226,4 +226,24 @@ public class Matematicas {
     numeroIntroducido = Matematicas.voltear(numeroIntroducido);
     return numeroIntroducido;
   }
+
+  public static int trozoDeNumero(int numeroIntroducido, int numPegar){
+
+  }
+
+  public static int juntaNumeros(int numeroIntroducido, int numPegar){
+
+    int vecesDividido = 0;
+    int pegamento = numPegar;
+    while (numPegar > 0){
+      numPegar = numPegar / 10;
+      vecesDividido++;
+    }
+    while (vecesDividido > 0){
+      numeroIntroducido = numeroIntroducido * 10;
+      vecesDividido--;      
+    }
+    numeroIntroducido = numeroIntroducido + pegamento;
+    return numeroIntroducido;
+  } 
 }
