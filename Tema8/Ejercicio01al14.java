@@ -86,15 +86,23 @@ public class Ejercicio01al14 {
 
     System.out.println("El número volteado es " + Matematicas.voltear(numAVoltear));
 
-
-    // posicionDigito
+    // posicionN
     System.out.println("Introduce el número que quiera saber la posición de su dígito: ");
     int numN = Integer.parseInt(s.nextLine());
 
     System.out.println("Introduce la posición que quiere conocer: ");
-    int posicion = Integer.parseInt(s.nextLine());
+    int N = Integer.parseInt(s.nextLine());
 
-    System.out.println("El dígito de la " + posicion + " posición es " + Matematicas.posicionN(numN, posicion));
+    System.out.println("El dígito de la " + N + " posición es " + Matematicas.posicionN(numN, N));
+    
+    // posicionDeDigito
+
+    System.out.println("Introduce el número que quiera saber la posicion en la que se encuentra el dígito que introduzca: ");
+    int numDigito = Integer.parseInt(s.nextLine());
+
+    System.out.println("Introduce el dígito que quiera conocer la posicion en la que se encuentra: ");
+    int digito = Integer.parseInt(s.nextLine());
+
+    System.out.println("El dígito " + digito + " posición es " + Matematicas.posicionDeDigito(numDigito, digito));
   }
-
 }

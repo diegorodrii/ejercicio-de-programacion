@@ -133,13 +133,31 @@ public class Matematicas {
    * @param posicion
    * @return
    */
-  public static int posicionN(int numN, int posicion) {
+  public static int posicionN(int numN, int N) {
     numN = Matematicas.voltear(numN);
 
-    while(posicion > 0 ){
+    while (N > 0) {
       numN = numN / 10;
-      posicion--;
+      N--;
     }
     return numN % 10;
+  }
+
+  /**
+   * 
+   * Da la posición de la primera ocurrencia de un dígito
+   * dentro de un número entero. Si no se encuentra, devuelve -1.
+   * 
+   * @param numDigito
+   * @return
+   */
+  public static int posicionDeDigito(int numDigito, int digito) {
+    numDigito = Matematicas.voltear(numDigito);
+    int posicion = 0;
+    while (numDigito % 10 != digito){
+      numDigito = numDigito / 10;
+      posicion++;
+    }
+    return posicion;
   }
 }
