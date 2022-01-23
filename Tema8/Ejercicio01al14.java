@@ -124,5 +124,18 @@ public class Ejercicio01al14 {
      nDigElim = Integer.parseInt(s.nextLine());
  
      System.out.println("El número se queda así: " + Matematicas.quitaPorDelante(numDelante, nDigElim));
-  }
+ 
+ 
+    // pegaPorDetrás
+
+    System.out.println("Introduce el número al que le quiere pegar por detrás: ");
+    numeroIntroducido = Integer.parseInt(s.nextLine());
+
+    System.out.println("Introduce el dígito que quiere añadir atrás del número: ");
+    int numPegado = Integer.parseInt(s.nextLine());
+
+    System.out.println("El número con el dígito pegado queda " + Matematicas.pegaPorDetras(numeroIntroducido, numPegado));
+ 
+ 
+    }
 }

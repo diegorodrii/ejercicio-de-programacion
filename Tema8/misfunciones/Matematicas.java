@@ -202,4 +202,14 @@ public class Matematicas {
     }
     return Matematicas.voltear(numDelante);
   }
+/**
+ * 
+ * @param numeroIntroducido
+ * @param numPegado
+ * @return <code> numeroIntroducido </code>
+ */
+  public static int pegaPorDetras(int numeroIntroducido, int numPegado){
+    numeroIntroducido = numeroIntroducido * 10 + numPegado;
+    return numeroIntroducido;
+  }
 }
