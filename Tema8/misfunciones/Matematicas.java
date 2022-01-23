@@ -227,8 +227,17 @@ public class Matematicas {
     return numeroIntroducido;
   }
 
-  public static int trozoDeNumero(int numeroIntroducido, int numPegar){
+  public static int trozoDeNumero(int numeroIntroducido){
+    int digito1 = 0;
+    digito1 = numeroIntroducido % 10;
+    numeroIntroducido = Matematicas.voltear(numeroIntroducido);
 
+    numeroIntroducido = (numeroIntroducido % 10) * 10; // sacamos el digito inicial, que multiplicamos por 10 para asi tenerlo como decenas
+
+    return numeroIntroducido + digito1;
+                                                        
+
+    
   }
 
   public static int juntaNumeros(int numeroIntroducido, int numPegar){

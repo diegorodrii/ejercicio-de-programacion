@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import misfunciones.Matematicas;
-import misfunciones.Figuras;
+// import misfunciones.Figuras;
 
 /**
  * Crea una biblioteca de funciones matemáticas que contenga las siguientes
@@ -150,12 +150,16 @@ public class Ejercicio01al14 {
 
     // trozoDeNumero
 
-
-    // juntaNumeros
-    System.out.println("Introduce el número al que quiere pegar el trozo de número: ");
+    System.out.print("Introduce el número del cual quiere saber la posicion inicial y final: ");
     numeroIntroducido = Integer.parseInt(s.nextLine());
 
-    System.out.println("Introduce el número que quiere pegar: ");
+    System.out.println("El número se queda como: " + Matematicas.trozoDeNumero(numeroIntroducido));
+
+    // juntaNumeros
+    System.out.print("Introduce el número al que quiere pegar el trozo de número: ");
+    numeroIntroducido = Integer.parseInt(s.nextLine());
+
+    System.out.print("Introduce el número que quiere pegar: ");
     int numPegar = Integer.parseInt(s.nextLine());
 
     System.out.println("El número se queda como: " + Matematicas.juntaNumeros(numeroIntroducido, numPegar));

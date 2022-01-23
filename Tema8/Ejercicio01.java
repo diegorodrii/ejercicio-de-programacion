@@ -1,4 +1,4 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
 /**
  * Crea una biblioteca de funciones matemáticas que contenga las siguientes
