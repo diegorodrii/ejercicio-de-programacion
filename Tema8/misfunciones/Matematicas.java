@@ -193,14 +193,13 @@ public class Matematicas {
    * @return
    */
   public static int quitaPorDelante(int numDelante, int nDigElim) {
+    
     numDelante = Matematicas.voltear(numDelante);
-    int x = 0;
 
     while (nDigElim > 0){
-      x = x * 10 + numDelante % 10;
       numDelante = numDelante / 10;
       nDigElim--;
     }
-    return x;
+    return Matematicas.voltear(numDelante);
   }
 }
