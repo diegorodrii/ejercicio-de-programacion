@@ -63,6 +63,21 @@ public class Matematicas {
     }
   }
 
+  public static int esPrimox(int numero, int numMax) {
+    numero = 0;
+
+    while (0 < numMax) {
+      for (int i = 2; i < numero; i++) {
+        if ((numero % i) == 0) {
+          
+        }
+        
+      }
+      return numero;
+      numMax--;
+    }
+  }
+
   /**
    * 
    * @param numeroIntroducido
@@ -159,7 +174,7 @@ public class Matematicas {
     while (numDigito % 10 != digito) {
       numDigito = numDigito / 10;
       posicion++;
-      if ((posicion == 0) && (numDigito % 10 != digito)){
+      if ((posicion == 0) && (numDigito % 10 != digito)) {
         return -1;
       }
     }
@@ -177,14 +192,14 @@ public class Matematicas {
    */
   public static int quitaPorDetras(int numDetras, int nDigElim) {
 
-    while (nDigElim > 0){
+    while (nDigElim > 0) {
       numDetras = numDetras / 10;
       nDigElim--;
     }
     return numDetras;
   }
 
-    /**
+  /**
    * Le quita a un número n dígitos por delante (por la
    * izquierda).
    * 
@@ -193,26 +208,26 @@ public class Matematicas {
    * @return
    */
   public static int quitaPorDelante(int numDelante, int nDigElim) {
-    
+
     numDelante = Matematicas.voltear(numDelante);
 
-    while (nDigElim > 0){
+    while (nDigElim > 0) {
       numDelante = numDelante / 10;
       nDigElim--;
     }
     return Matematicas.voltear(numDelante);
   }
-/**
- * 
- * @param numeroIntroducido
- * @param numPegado
- * @return <code> numeroIntroducido </code>
- */
-  public static int pegaPorDetras(int numeroIntroducido, int numPegado){
+
+  /**
+   * 
+   * @param numeroIntroducido
+   * @param numPegado
+   * @return <code> numeroIntroducido </code>
+   */
+  public static int pegaPorDetras(int numeroIntroducido, int numPegado) {
     numeroIntroducido = numeroIntroducido * 10 + numPegado;
     return numeroIntroducido;
   }
-
 
   /**
    * 
@@ -220,39 +235,38 @@ public class Matematicas {
    * @param numPegado
    * @return
    */
-  public static int pegaPorDelante(int numeroIntroducido, int numPegado){
+  public static int pegaPorDelante(int numeroIntroducido, int numPegado) {
     numeroIntroducido = Matematicas.voltear(numeroIntroducido);
     numeroIntroducido = numeroIntroducido * 10 + numPegado;
     numeroIntroducido = Matematicas.voltear(numeroIntroducido);
     return numeroIntroducido;
   }
 
-  public static int trozoDeNumero(int numeroIntroducido){
+  public static int trozoDeNumero(int numeroIntroducido) {
     int digito1 = 0;
     digito1 = numeroIntroducido % 10;
     numeroIntroducido = Matematicas.voltear(numeroIntroducido);
 
-    numeroIntroducido = (numeroIntroducido % 10) * 10; // sacamos el digito inicial, que multiplicamos por 10 para asi tenerlo como decenas
+    numeroIntroducido = (numeroIntroducido % 10) * 10; // sacamos el digito inicial, que multiplicamos por 10 para asi
+                                                       // tenerlo como decenas
 
     return numeroIntroducido + digito1;
-                                                        
 
-    
   }
 
-  public static int juntaNumeros(int numeroIntroducido, int numPegar){
+  public static int juntaNumeros(int numeroIntroducido, int numPegar) {
 
     int vecesDividido = 0;
     int pegamento = numPegar;
-    while (numPegar > 0){
+    while (numPegar > 0) {
       numPegar = numPegar / 10;
       vecesDividido++;
     }
-    while (vecesDividido > 0){
+    while (vecesDividido > 0) {
       numeroIntroducido = numeroIntroducido * 10;
-      vecesDividido--;      
+      vecesDividido--;
     }
     numeroIntroducido = numeroIntroducido + pegamento;
     return numeroIntroducido;
-  } 
+  }
 }
