@@ -24,10 +24,7 @@ public class PruebaValorYReferencia {
         for (int i = 0; i < n.length; i++) {
             resultado[i] = n[i] + 5;
         }
-        
-        for (int i = 0; i < n.length; i++) {
-           
-        }
+
         System.out.println("n desde suma5: " );
         for (int i : resultado) {
             System.out.print(i + " ");
