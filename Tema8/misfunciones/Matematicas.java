@@ -63,21 +63,6 @@ public class Matematicas {
     }
   }
 
-  public static int esPrimox(int numero, int numMax) {
-    numero = 0;
-
-    while (0 < numMax) {
-      for (int i = 2; i < numero; i++) {
-        if ((numero % i) == 0) {
-          
-        }
-        
-      }
-      return numero;
-      numMax--;
-    }
-  }
-
   /**
    * 
    * @param numeroIntroducido

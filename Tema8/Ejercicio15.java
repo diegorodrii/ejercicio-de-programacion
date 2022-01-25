@@ -18,7 +18,6 @@ public class Ejercicio15 {
         System.out.println(i);
       }
     }
-  
 
 
   }
