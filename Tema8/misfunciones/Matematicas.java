@@ -254,4 +254,21 @@ public class Matematicas {
     numeroIntroducido = numeroIntroducido + pegamento;
     return numeroIntroducido;
   }
+
+  public static int convierteBinarioDecimal (int binario){
+    int digito = 0;
+    int sumaDecimal = 0;
+    int base = 2;
+    int exponente = 0;
+    while(binario > 0){
+      digito = binario % 10;
+      if(digito != 0){
+        sumaDecimal = sumaDecimal + (int)(Math.pow(base, exponente));
+      }
+      binario = binario / 10;
+      exponente++;
+
+    }
+    return sumaDecimal;
+  }
 }
