@@ -13,7 +13,7 @@ public class Ejercicio17 {
 
     Scanner s = new Scanner(System.in);
     System.out.println("Introduce el número en binario: ");
-    int binario = Integer.parseInt(s.nextLine());
+    long binario = Long.parseLong(s.nextLine());
 
     System.out.println("El número convertido de binario a decimal es: " + Matematicas.convierteBinarioDecimal(binario));
 

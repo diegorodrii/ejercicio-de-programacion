@@ -13,7 +13,7 @@ public class Ejercicio18 {
 
     Scanner s = new Scanner(System.in);
     System.out.println("Introduce el número en decimal: ");
-    int decimal = Integer.parseInt(s.nextLine());
+    long decimal = Long.parseLong(s.nextLine());
 
     System.out.print("El número pasado a decimal queda como " + Matematicas.convierteDecimalBinario(decimal));
 
