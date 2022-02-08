@@ -3,13 +3,12 @@ public class Execute {
         System.out.println("Cuadra ");
         System.out.println("=============");
        
-        Caballo Eduardo = new Caballo();
+        Caballo eduardo = new Caballo("Eduardo", "Puente Genil", "platano");
 
 
-        Eduardo.relincha();
+        eduardo.relincha();
 
-        Eduardo.presentacion("Eduardo", "Puente Genil", "platano");
-
+        eduardo.presentacion();
 
       }
 }
