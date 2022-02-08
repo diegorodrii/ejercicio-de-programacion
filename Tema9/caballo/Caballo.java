@@ -1,3 +1,4 @@
+package caballo;
 public class Caballo {
     private int numCaballo;
     private String nombre;
