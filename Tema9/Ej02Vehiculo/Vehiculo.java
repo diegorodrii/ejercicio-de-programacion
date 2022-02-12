@@ -10,7 +10,7 @@ public abstract class Vehiculo {
     private static int kilometrosTotales;
 
     //atributos de la instancia 
-    private static int kilometrosRecorridos;
+    private int kilometrosRecorridos;
 
     public Vehiculo() {
         this.kilometrosRecorridos = 0;
@@ -21,8 +21,8 @@ public abstract class Vehiculo {
     }
 
 
-    public static int getKilometrosRecorridos() {
-        return kilometrosRecorridos;
+    public int getKilometrosRecorridos() {
+        return this.kilometrosRecorridos;
     }
 
     public void recorre(int k){
