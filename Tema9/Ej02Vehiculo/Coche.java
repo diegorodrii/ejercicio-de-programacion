@@ -13,19 +13,10 @@ public class Coche extends Vehiculo{
         System.out.println();
     }
 
-    public void andaCoche(){
-        System.out.print("Cuantos km quieres que recorra?: ");
-        int recorridoCoche = Integer.parseInt(s.nextLine());
-        kilometrosRecorridos += recorridoCoche;
-    }
-
     public void quemaRueda(){
         System.out.println("Mira como gamberreo soy un super chulo!");
     }
 
-    public int getKilometrosRecorridos() {
-        return kilometrosRecorridos;
-    }
 
     
 

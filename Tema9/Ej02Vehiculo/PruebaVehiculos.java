@@ -10,6 +10,7 @@ public class PruebaVehiculos {
         Scanner s = new Scanner(System.in);
 
         int eleccion = 0;
+        int km = 0;
         while (eleccion != 8) {
             System.out.println("Vehículos");
             System.out.println("=========");
@@ -27,25 +28,32 @@ public class PruebaVehiculos {
             boolean salir = false;
             switch (eleccion) {
                 case 1:
-                    bici1.andaBici();
+                    System.out.println("La la la la voy con mi bicicleta!");
+                    System.out.print("Cuantos km quieres que recorra?: ");
+                    km = Integer.parseInt(s.nextLine());
+                    bici1.recorre(km);
+
                     break;
                 case 2:
                     bici1.caballito();
                     break;
                 case 3:
-                    coche1.andaCoche();
+                    System.out.print("Cuantos km quieres que recorra?: ");
+                    km = Integer.parseInt(s.nextLine());
+                    coche1.recorre(km);
                     break;
                 case 4:
                     coche1.quemaRueda();
                     break;
                 case 5:
-                    bici1.getKilometrosRecorridos();
+                    System.out.println("La bici lleva recorridos " + bici1.getKilometrosRecorridos());
                     break;
                 case 6:
-                    coche1.getKilometrosRecorridos();
+                    System.out.println("La bici lleva recorridos " + coche1.getKilometrosRecorridos());
                     break;
                 case 7:
-                    coche1.quemaRueda();
+                    System.out.println("El total de kilometraje es " + Vehiculo.getKilometrosTotales());
+                    
                     break;
                 case 8:
                     System.out.println("Hasta luego!");

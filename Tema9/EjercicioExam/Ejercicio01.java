@@ -1,3 +1,5 @@
+package EjercicioExam;
+
 public class Ejercicio01 {
     public static void main(String[] args) {
     Alumno.setExpedienteInicial(5000);

@@ -1,8 +1,3 @@
-import java.util.Scanner;
-
-import Ej02Vehiculo.Bicicleta;
-import Ej02Vehiculo.Coche;
-import Ej02Vehiculo.Vehiculo;
 import caballo.Caballo;
 import fraccion.Fraccion;
 
