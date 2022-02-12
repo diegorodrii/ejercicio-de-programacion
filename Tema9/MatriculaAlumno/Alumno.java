@@ -1,4 +1,4 @@
-package EjercicioExam;
+package MatriculaAlumno;
 
 public class Alumno {
     private String nombre;
