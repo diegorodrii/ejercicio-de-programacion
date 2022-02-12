@@ -20,8 +20,14 @@ public class Bicicleta extends Vehiculo{
     }
 
     public int getKilometrosRecorridos() {
-        return kilometrosRecorridos;
+        return recorridoBici;
     }
+
+    public void setKilometrosRecorridos(int kilometrosRecorridos) {
+        this.kilometrosRecorridos = kilometrosRecorridos;
+    }
+
+  
 
 
 }
