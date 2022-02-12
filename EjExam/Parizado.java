@@ -47,16 +47,14 @@ public class Parizado {
         while (numVolteado > 0) {
             digito = numVolteado % 10;
 
-           
             if (digito % 2 != 0) {
                 if (digito == 9) {
                     digito = 0;
                 } else {
                     digito++;
                 }
-    
+
             }
-           
 
             resultado = resultado + digito * multiplicador;
             numVolteado = numVolteado / 10;
