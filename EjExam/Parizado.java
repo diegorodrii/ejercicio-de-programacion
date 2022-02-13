@@ -1,9 +1,4 @@
 import java.util.Scanner;
-
-import javax.print.attribute.ResolutionSyntax;
-
-import org.omg.Messaging.SyncScopeHelper;
-
 /**
  * 2. Realiza una función que devuelva el número “parizado” a otro que se pasa
  * como parámetro. Cada

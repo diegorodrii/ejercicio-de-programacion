@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Scanner;
+
 /**
  * Una cadena de multicines nos ha encargado una aplicación para la venta
  * on-line de entradas. Como
@@ -26,13 +29,101 @@
  */
 
 public class ButacaCine {
-    int[] array = new int [6];
+    public static void main(String[] aStrings) {
+        Scanner s = new Scanner(System.in);
+        int[] array = new int[6];
 
+        array[0] = 0;
+        array[1] = 1;
+        array[2] = 0;
+        array[3] = 1;
+        array[4] = 1;
+        array[5] = 0;
 
+        System.out.print("{ ");
+        for (int i = 0; i < array.length; i++) {
+            if (i == 5) {
+                System.out.print(" " + array[i] + " ");
+            } else {
+                System.out.print(" " + array[i] + ", ");
+            }
 
-    //FUNCION
-    public static int ocupa(int[ ] fila, int usuarios){
+        }
+        System.out.println("}");
+
+        int eleccion = 0;
+        while (eleccion != 2) {
+            System.out.println("Menú CineButacas");
+            System.out.println("=================");
+            System.out.println("1. Comprar entradas");
+            System.out.println("2. Salir");
+            System.out.print(">> ");
+
+            eleccion = Integer.parseInt(s.nextLine());
+            switch (eleccion) {
+                case 1:
+                    System.out.print("Cuantos asientos quiere ocupar?: ");
+                    int asientosPedidos = Integer.parseInt(s.nextLine());
+                    ocupa(array, asientosPedidos);
+                    System.out.print("{ ");
+                    for (int i = 0; i < array.length; i++) {
+                        if (i == 5) {
+                            System.out.print(" " + array[i] + " ");
+                        } else {
+                            System.out.print(" " + array[i] + ", ");
+                        }
+
+                    }
+                    System.out.println("}");
+                    System.out.println();
+
+                    break;
+
+                case 2:
+                    System.out.println("Esta bien, hasta luego!");
+                    break;
+            }
+        }
 
     }
 
+    // FUNCION
+    public static int ocupa(int[] fila, int usuarios) {
+
+        int asientosLibres = 0;
+        int asientosOcupados = 0;
+        boolean hayHueco = true;
+        for (int i = 0; i < fila.length; i++) {
+            if (fila[i] == 0) {
+                asientosLibres++;
+            } else {
+                asientosOcupados++;
+            }
+
+        }
+        if (asientosLibres >= usuarios) {
+
+            System.out.println("Tenemos sitios para tí, aqui tienes tus asientos!");
+            for (int j = 0; j < 6; j++) {
+                if (fila[j] == 0) {
+                    fila[j]++;
+                    usuarios--;
+                    if (usuarios == 0){
+                        break;
+                    }
+                }
+            }
+
+        } else {
+            System.out.println("No tengo huecos para ese número de usuarios");
+            hayHueco = false;
+        }
+
+        if (hayHueco) {
+            return 0;
+        } else {
+            return -1;
+        }
+
+    }
 }
