@@ -36,8 +36,8 @@ public class ButacaCine {
         array[0] = 0;
         array[1] = 1;
         array[2] = 0;
-        array[3] = 1;
-        array[4] = 1;
+        array[3] = 0;
+        array[4] = 0;
         array[5] = 0;
 
         System.out.print("{ ");
