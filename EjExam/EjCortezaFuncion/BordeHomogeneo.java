@@ -71,15 +71,15 @@ public class BordeHomogeneo {
         }
         // Columna derecha
         for (int i = 0; i < filas - 1; i++) {
-            resultado[j++] = a[i][columnas - 1];//Saco la primera columna
+            resultado[j++] = a[i][columnas - 1];//Saco la última columna
         }
         // Fila inferior
         for (int i = columnas - 1; i > 0; i--) {
-            resultado[j++] = a[filas - 1][i];//Saco la ultima fila
+            resultado[j++] = a[filas - 1][i];//Saco la última fila
         }
         // Columna izquierda
         for (int i = filas - 1; i > 0; i--) {
-            resultado[j++] = a[i][0];//Saco la ultima columna
+            resultado[j++] = a[i][0];//Saco la primera columna
         }
         boolean BordeHomogeneo = true;
         int indice = 0;
